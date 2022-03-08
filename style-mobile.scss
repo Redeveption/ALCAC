@@ -1,4 +1,4 @@
-$redsite: #bf3030;
+$redsite: #6d071a;
 $gray: rgb(173, 164, 164);
 $light-gray: rgb(133, 118, 118);
 $carbon-transparent: rgba(54, 48, 43, 0.7);
@@ -7,6 +7,16 @@ $carbon-transparent: rgba(54, 48, 43, 0.7);
     background: linear-gradient(#a32020, #531c1c);
 }
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.hidden-mobile {
+    display: none !important;
+}
+
+
+.hidden-tablette {
+    display: none !important;
+}
 
 /* body pour prendre l'ensemble de la page*/
 
@@ -29,7 +39,7 @@ header {
     flex-direction: column;
     width: 100vw;
     height: 10rem;
-    background-color: $redsite;
+    background-color: lighten($redsite,10%);
     padding: 0;
     margin: 0;
     &  nav > ul {
@@ -42,7 +52,7 @@ header {
         color: white;
         margin: 0;
         padding: 0;
-        background-color: darken($redsite,20%);
+        background-color: darken($redsite,10%);
         font-family: "Comfortaa", cursive;
         & li {
             display: flex;
@@ -79,11 +89,16 @@ header {
 
 /* ---- Navigation bar drop-down menu --- */
 
-.nav-menu ul {
-    display: none;
-    list-style: none;
-  }
+.nav-menu {
+    & ul {
+        display: none;
+        list-style: none;
+    }
 
+    & div {
+        overflow: hidden;
+    }
+}
 /* Appearance of the list when checked */
 
 nav input[type="checkbox"]:checked + ul {
@@ -93,11 +108,11 @@ nav input[type="checkbox"]:checked + ul {
 /* unchecked disappearance */
 nav input[type="checkbox"] {
     display: none;
-  }
+}
 
 /* Style menu */
 
-.menu {
+.drop-down {
     display: flex;
     flex-flow: column wrap;
     z-index: 100;
@@ -125,19 +140,27 @@ nav input[type="checkbox"] {
 .inner-head {
     display: flex;
     align-items: flex-start;
+    overflow: hidden;
 
     & img {
         width: 6em;
     }  
 }
 .head-title {
-    color: #390e0e;
+    color: white;
     margin-top: auto;
     margin-bottom: auto; 
         
-    & p {
-        font-size: 1rem;
-        margin-top: auto;
-        margin-bottom: auto; 
+    & p { 
+        color: $gray;
+        font-weight:300;
+        font-size: 1.2rem;
+
+        & b {
+            font-weight: 900;
+            font-style: normal;
+            font-size: 2rem;
+            color: white;
+        }
     }
-} 
+}

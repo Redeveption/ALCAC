@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
-.hidden-tablette {
+/* body pour prendre l'ensemble de la page*/
+.hidden-desktop {
   display: none !important;
 }
 
-/* body pour prendre l'ensemble de la page*/
 body {
   margin: 0;
   padding: 0;
@@ -124,8 +124,8 @@ header nav > ul li > a svg {
   list-style: none;
 }
 
-/* Appearance of the list when checked */
-nav input[type="checkbox"]:checked + ul {
+/* Appearance of the list when checked in hover with the mouse */
+.hover-mouse input[type="checkbox"]:hover + ul {
   display: block;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -134,7 +134,21 @@ nav input[type="checkbox"]:checked + ul {
 }
 
 /* unchecked disappearance */
-nav input[type="checkbox"] {
+.hover-mouse input[type="checkbox"] {
+  display: none;
+}
+
+/* Appearance of the list when checked with click of the mouse for menu desktop */
+.complex-menu input[type="checkbox"]:checked + ul {
+  display: block;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+/* unchecked disappearance */
+.complex-menu input[type="checkbox"] {
   display: none;
 }
 
@@ -150,8 +164,7 @@ nav input[type="checkbox"] {
   z-index: 100;
   position: absolute;
   top: 4rem;
-  right: 0;
-  width: 100%;
+  width: 30%;
 }
 
 .drop-down li {
@@ -164,8 +177,32 @@ nav input[type="checkbox"] {
           box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
   display: block;
   text-decoration: none;
-  background-color: rgba(54, 48, 43, 0.7);
+  background-color: white;
   padding: 9vh;
+  font-size: 1.2rem;
+}
+
+.drop-down p {
+  background-color: #6d071a;
+  width: 100%;
+}
+
+.complex-menu ul {
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9d0a25), to(#a32020));
+  background: linear-gradient(#9d0a25, #a32020);
+  padding-right: 2vw;
+}
+
+.complex-menu ul p {
+  border-bottom: none;
+  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+  display: block;
+  text-decoration: none;
+  background-color: #6d071a;
+  width: 100%;
+  padding: 2vh;
   font-size: 1.2rem;
 }
 
@@ -210,4 +247,4 @@ nav input[type="checkbox"] {
   font-size: 2rem;
   color: white;
 }
-/*# sourceMappingURL=style-tablette.css.map */
+/*# sourceMappingURL=style-desktop.css.map */

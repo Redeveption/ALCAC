@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Association de Lutte Contre l'Addiction à la Configure</title>
+    <title>Association de Lutte Contre l'Addiction à la Confiture</title>
     <link rel="stylesheet" href="style-mobile.css" media="screen and (min-width: 1px) and (max-width: 763px)"> <!--version mobile first-->
     <link rel="stylesheet" href="style-tablette.css" media="screen and (min-width: 764px) and (max-width: 1439px)"> <!--version tablette-->
     <link rel="stylesheet" href="style-desktop.css" media="screen and (min-width: 1440px)"> <!--version desktop-->
@@ -29,21 +29,92 @@
                     </svg>
                     </a>
                 </li>
-                <li>
+                <li class="hidden-mobile hidden-tablette hover-mouse">
+                    <div class="spacelist nav-menu"> 
+                        <label for="actions">
+                                <p>Nos actions</p>
+                        </label>
+                        <input type="checkbox" id="actions" role="button">
+                        <!--drop-down menu-->
+                        <ul class="drop-down">
+                            <li><a href="#">Apporter une solution</a></li>
+                            <li><a href="#">Agir contre la vulnérabilité</a></li>
+                            <li><a href="#">Témoigner-Alerter</a></li>
+                            <li><a href="#">Devenir Bénévole</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hidden-mobile hidden-tablette hover-mouse"> 
+                    <div class="spacelist nav-menu"> 
+                        <label for="whoRwe">
+                            <p>Qui sommes-nous</p>
+                        </label>
+                        <input type="checkbox" id="whoRwe" role="button">
+                        <!--drop-down menu-->
+                        <ul class="drop-down">
+                            <li><a href="#">L'association</a></li>
+                            <li><a href="#">La fondation</a></li>
+                            <li><a href="#">Nos implantations</a></li>
+                            <li><a href="#">Nos chiffres</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hidden-mobile hidden-desktop">
+                    <div class="spacelist nav-menu btn-header"> 
+                        <a href="#">Agir</a>
+                    </div>
+                </li>
+                <li class="hidden-mobile">
+                    <div class="spacelist nav-menu"> 
+                        <a href="#">Faire un don</a>
+                    </div>
+                </li>
+                <li class="hidden-desktop">
                     <div class="spacelist nav-menu">
-                            <label for="menu">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                                </svg>
-                            </label>
-                            <input type="checkbox" id="menu" role="button">
-                            <!--drop-down menu-->
-                                <ul class="menu">
-                                    <li><a href="#">Comprendre l'addiction</a></li>
-                                    <li><a href="#">Qui somme nous</a></li>
-                                    <li><a href="#">Évènement</a></li>
-                                    <li><a href="#">Devenir Bénévole</a></li>
-                                </ul>
+                        <label for="basic-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                            <div class="hidden-mobile">
+                                <p>Menu</p>
+                            </div>
+                        </label>
+                        <input type="checkbox" id="basic-menu" role="button"> 
+                        <!--drop-down menu-->
+                        <ul class="drop-down">
+                            <li><a href="#">Comprendre l'addiction</a></li>
+                            <li><a href="#">Qui somme nous</a></li>
+                            <li><a href="#">Évènement</a></li>
+                            <li><a href="#">Devenir Bénévole</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hidden-mobile hidden-tablette complex-menu">
+                    <div class="spacelist nav-menu">
+                        <label for="desktop-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                            <div>
+                                <p>Menu</p>
+                            </div>
+                        </label>
+                        <input type="checkbox" id="desktop-menu" role="button"> 
+                        <!--drop-down menu-->
+                        <ul class="drop-down">
+                            <li><p>Comprendre l'addiction</p></li>
+                            <li><a href="#">Qui somme nous</a></li>
+                            <li><a href="#">Évènement</a></li>
+                            <li><a href="#">Devenir Bénévole</a></li>
+                            <li><p>Comprendre l'addiction</p></li>
+                            <li><a href="#">Qui somme nous</a></li>
+                            <li><a href="#">Évènement</a></li>
+                            <li><a href="#">Devenir Bénévole</a></li>
+                            <li><p>Comprendre l'addiction</p></li></li>
+                            <li><a href="#">Qui somme nous</a></li>
+                            <li><a href="#">Évènement</a></li>
+                            <li><a href="#">Devenir Bénévole</a></li>
+                        </ul>
                     </div>
                 </li>
             </ul>
@@ -51,8 +122,10 @@
         <div class="inner-head">
             <img src="Images/ALCAC-White.png" alt="">
             <div class="head-title">
-                <h1>ALCAC</h1>
-                <p> Association de Lutte Contre l'Addiction à la Configure</p>
+                <div class="hidden-mobile">
+                    <h1>ALAC</h1>
+                </div>
+                <p><b>A</b>ssociation de <b>L</b>utte <b>C</b>ontre l'<b>A</b>ddiction à la <b>C</b>onfiture</p>
              </div>
         </div>
     </header>

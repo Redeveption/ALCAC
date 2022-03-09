@@ -54,8 +54,8 @@ header {
             & > a {
                 @include justifyheader();
                 flex: 2 1 auto;
-                border-right: 1px solid $light-gray;
-                border-left: 1px solid $light-gray;
+                border-right: 2px solid $light-gray;
+                border-left: 2px solid $light-gray;
                 & svg {
                     width: 2em;
                     height: 2em; 

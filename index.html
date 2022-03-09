@@ -29,46 +29,51 @@
                     </svg>
                     </a>
                 </li>
+                <!-- menu hidden for mobile and tablet-->
                 <li class="hidden-mobile hidden-tablette hover-mouse">
                     <div class="spacelist nav-menu"> 
                         <label for="actions">
-                                <p>Nos actions</p>
+                            <p>Nos actions</p>
+                            <input type="checkbox" id="actions" role="button">
+                            <!--drop-down menu-->
+                            <ul>
+                                <li><a href="#">Apporter une solution</a></li>
+                                <li><a href="#">Agir contre la vulnérabilité</a></li>
+                                <li><a href="#">Témoigner-Alerter</a></li>
+                                <li><a href="#">Devenir Bénévole</a></li>
+                            </ul>
                         </label>
-                        <input type="checkbox" id="actions" role="button">
-                        <!--drop-down menu-->
-                        <ul class="drop-down">
-                            <li><a href="#">Apporter une solution</a></li>
-                            <li><a href="#">Agir contre la vulnérabilité</a></li>
-                            <li><a href="#">Témoigner-Alerter</a></li>
-                            <li><a href="#">Devenir Bénévole</a></li>
-                        </ul>
                     </div>
                 </li>
+                <!--menu hidden for mobile and tablet-->
                 <li class="hidden-mobile hidden-tablette hover-mouse"> 
                     <div class="spacelist nav-menu"> 
                         <label for="whoRwe">
                             <p>Qui sommes-nous</p>
+                            <input type="checkbox" id="whoRwe" role="button">
+                            
+                            <ul>
+                                <li><a href="#">L'association</a></li>
+                                <li><a href="#">La fondation</a></li>
+                                <li><a href="#">Nos implantations</a></li>
+                                <li><a href="#">Nos chiffres</a></li>
+                            </ul>
                         </label>
-                        <input type="checkbox" id="whoRwe" role="button">
-                        <!--drop-down menu-->
-                        <ul class="drop-down">
-                            <li><a href="#">L'association</a></li>
-                            <li><a href="#">La fondation</a></li>
-                            <li><a href="#">Nos implantations</a></li>
-                            <li><a href="#">Nos chiffres</a></li>
-                        </ul>
                     </div>
                 </li>
+                <!--menu hidden for mobile and desktop-->
                 <li class="hidden-mobile hidden-desktop">
                     <div class="spacelist nav-menu btn-header"> 
                         <a href="#">Agir</a>
                     </div>
                 </li>
+                <!--menu hidden for mobile-->
                 <li class="hidden-mobile">
                     <div class="spacelist nav-menu"> 
                         <a href="#">Faire un don</a>
                     </div>
                 </li>
+                <!--menu hidden desktop-->
                 <li class="hidden-desktop">
                     <div class="spacelist nav-menu">
                         <label for="basic-menu">
@@ -89,7 +94,8 @@
                         </ul>
                     </div>
                 </li>
-                <li class="hidden-mobile hidden-tablette complex-menu">
+                <!--menu hidden for mobile and tablet-->
+                <li class="hidden-mobile hidden-tablette click-drop-menu">
                     <div class="spacelist nav-menu">
                         <label for="desktop-menu">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -98,23 +104,23 @@
                             <div>
                                 <p>Menu</p>
                             </div>
+                            <input type="checkbox" id="desktop-menu" role="button"> 
+                            <!--drop-down menu-->
+                            <ul>
+                                <li><p>Comprendre l'addiction</p></li>
+                                <li><a href="#">Qui somme nous</a></li>
+                                <li><a href="#">Évènement</a></li>
+                                <li><a href="#">Devenir Bénévole</a></li>
+                                <li><p>Comprendre l'addiction</p></li>
+                                <li><a href="#">Qui somme nous</a></li>
+                                <li><a href="#">Évènement</a></li>
+                                <li><a href="#">Devenir Bénévole</a></li>
+                                <li><p>Comprendre l'addiction</p></li></li>
+                                <li><a href="#">Qui somme nous</a></li>
+                                <li><a href="#">Évènement</a></li>
+                                <li><a href="#">Devenir Bénévole</a></li>
+                            </ul>
                         </label>
-                        <input type="checkbox" id="desktop-menu" role="button"> 
-                        <!--drop-down menu-->
-                        <ul class="drop-down">
-                            <li><p>Comprendre l'addiction</p></li>
-                            <li><a href="#">Qui somme nous</a></li>
-                            <li><a href="#">Évènement</a></li>
-                            <li><a href="#">Devenir Bénévole</a></li>
-                            <li><p>Comprendre l'addiction</p></li>
-                            <li><a href="#">Qui somme nous</a></li>
-                            <li><a href="#">Évènement</a></li>
-                            <li><a href="#">Devenir Bénévole</a></li>
-                            <li><p>Comprendre l'addiction</p></li></li>
-                            <li><a href="#">Qui somme nous</a></li>
-                            <li><a href="#">Évènement</a></li>
-                            <li><a href="#">Devenir Bénévole</a></li>
-                        </ul>
                     </div>
                 </li>
             </ul>
@@ -123,7 +129,7 @@
             <img src="Images/ALCAC-White.png" alt="">
             <div class="head-title">
                 <div class="hidden-mobile">
-                    <h1>ALAC</h1>
+                    <h1>ALCAC</h1>
                 </div>
                 <p><b>A</b>ssociation de <b>L</b>utte <b>C</b>ontre l'<b>A</b>ddiction à la <b>C</b>onfiture</p>
              </div>

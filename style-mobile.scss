@@ -219,12 +219,15 @@ $slider-height: 100%;
     background: #999;
   }
 }
-
+/* Style of the text of the carousel*/
 #Slide figure {
   position: relative;
   display: inline-block;
   padding: 0;
   margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: small;
 
   &::after {
     position: absolute;
@@ -235,48 +238,40 @@ $slider-height: 100%;
     width: $slider-width;
     height: $slider-height;
   }
-}
-
-/* Style of the text of the carousel*/
-.image figure {
-  display: flex;
-  align-items: center;
-  font-size: small;
-  margin-top: 1rem; 
   & figcaption {
-  position: absolute;
-  height: 35%;
-  left: 0;
-  right: 0;
-  width: $slider-width;
-  bottom: 0.55%;
-  border-top: 1px solid rgb(225, 225, 225);
-  text-align: center;
-  background: #fff;
-  background: $red-trans;
-  color: $grayperle;
-    & h3 {
-    font-size: 1.5rem;
-    font-weight:bolder;
-  }
-    & p {
-    @media screen and (min-width:600px)  {
-    font-size: 140%;
-    margin-top: -3vh;
-        }
-        @media screen and (min-width:500px) and (max-width:600px) {
-    font-size: 125%;
-    margin-top: -3vh;
-        }
-        @media screen and (min-width:450px) and (max-width:500px) {
-    font-size: 100%;
-    margin-top: -5vh;
-        }
-        @media screen and (min-width:0px) and (max-width:450px)  {
-    display: none;
-        }
+    position: absolute;
+    height: 35%;
+    left: 0;
+    right: 0;
+    width: $slider-width;
+    bottom: 0.55%;
+    border-top: 1px solid rgb(225, 225, 225);
+    text-align: center;
+    background: #fff;
+    background: $red-trans;
+    color: $grayperle;
+      & h3 {
+      font-size: 1.5rem;
+      font-weight:bolder;
     }
-  }
+      & p {
+      @media screen and (min-width:600px)  {
+      font-size: 140%;
+      margin-top: -3vh;
+          }
+          @media screen and (min-width:500px) and (max-width:600px) {
+      font-size: 125%;
+      margin-top: -3vh;
+          }
+          @media screen and (min-width:450px) and (max-width:500px) {
+      font-size: 100%;
+      margin-top: -5vh;
+          }
+          @media screen and (min-width:0px) and (max-width:450px)  {
+      display: none;
+          }
+      }
+    }
 }
 
 
@@ -385,14 +380,17 @@ $animationDuration: (4100ms*$numberAnimation);
   z-index: 10;
   color: $redsite;
   background-color: rgba(255, 255, 255, 0);
-  width: 15%;
-  height: 99.25%;
-  & p {
-    color: lighten($redsite, 10%);
-    font-family: "Nanum Gothic", sans-serif;
-    text-align: center;
-    font-size: 2.5rem;
-    padding-top: 175%;
+  & div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    & p {
+      color: $red-trans;
+      font-family: "Nanum Gothic", sans-serif;
+      font-size: 2.5rem;
+    }  
   }
 }
 /* Touch slide animation */
@@ -417,18 +415,29 @@ $animationDuration: (4100ms*$numberAnimation);
   }
 }
 
+
 .prev {
-  left: 0;
+  width: 15%;
+  height: 100%;
   &:active {
-    animation: 90ms anim-cmd1;
+  animation: 90ms anim-cmd1;
+    }
+  & p {
+    padding-left: 1vw;
     }
 }
 
 .next {
   right: 0;
+  width: 15%;
+  height: 100%;
+  align-content: center;
   &:active {
-    animation: 90ms anim-cmd2;
+  animation: 90ms anim-cmd2;
     }
+  & p {
+    padding-left: 9vw;
+  }
 }
 /* Creation of the navigation buttons display */
 @for $ni from 1 to ($numberAnimation + 1)  {
@@ -631,6 +640,7 @@ aside .Selection {
       text-decoration:none;
 
       & img {
+        margin-top: 15vh;
         width: 100%;
       }
     }

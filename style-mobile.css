@@ -238,11 +238,19 @@ nav input[type="checkbox"] {
   background: #999;
 }
 
+/* Style of the text of the carousel*/
 #Slide figure {
   position: relative;
   display: inline-block;
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: small;
 }
 
 #Slide figure::after {
@@ -255,19 +263,7 @@ nav input[type="checkbox"] {
   height: 100%;
 }
 
-/* Style of the text of the carousel*/
-.image figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: small;
-  margin-top: 1rem;
-}
-
-.image figure figcaption {
+#Slide figure figcaption {
   position: absolute;
   height: 35%;
   left: 0;
@@ -281,34 +277,34 @@ nav input[type="checkbox"] {
   color: #cecece;
 }
 
-.image figure figcaption h3 {
+#Slide figure figcaption h3 {
   font-size: 1.5rem;
   font-weight: bolder;
 }
 
 @media screen and (min-width: 600px) {
-  .image figure figcaption p {
+  #Slide figure figcaption p {
     font-size: 140%;
     margin-top: -3vh;
   }
 }
 
 @media screen and (min-width: 500px) and (max-width: 600px) {
-  .image figure figcaption p {
+  #Slide figure figcaption p {
     font-size: 125%;
     margin-top: -3vh;
   }
 }
 
 @media screen and (min-width: 450px) and (max-width: 500px) {
-  .image figure figcaption p {
+  #Slide figure figcaption p {
     font-size: 100%;
     margin-top: -5vh;
   }
 }
 
 @media screen and (min-width: 0px) and (max-width: 450px) {
-  .image figure figcaption p {
+  #Slide figure figcaption p {
     display: none;
   }
 }
@@ -484,16 +480,25 @@ nav input[type="checkbox"] {
   z-index: 10;
   color: #6d071a;
   background-color: rgba(255, 255, 255, 0);
-  width: 15%;
-  height: 99.25%;
 }
 
-.commandes p {
-  color: #9d0a25;
+.commandes div {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+}
+
+.commandes div p {
+  color: rgba(191, 48, 48, 0.5);
   font-family: "Nanum Gothic", sans-serif;
-  text-align: center;
   font-size: 2.5rem;
-  padding-top: 175%;
 }
 
 /* Touch slide animation */
@@ -549,7 +554,8 @@ nav input[type="checkbox"] {
 }
 
 .prev {
-  left: 0;
+  width: 15%;
+  height: 100%;
 }
 
 .prev:active {
@@ -557,13 +563,25 @@ nav input[type="checkbox"] {
           animation: 90ms anim-cmd1;
 }
 
+.prev p {
+  padding-left: 1vw;
+}
+
 .next {
   right: 0;
+  width: 15%;
+  height: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .next:active {
   -webkit-animation: 90ms anim-cmd2;
           animation: 90ms anim-cmd2;
+}
+
+.next p {
+  padding-left: 9vw;
 }
 
 /* Creation of the navigation buttons display */
@@ -953,6 +971,7 @@ aside .Selection p a {
 }
 
 .calendar a img {
+  margin-top: 15vh;
   width: 100%;
 }
 /*# sourceMappingURL=style-mobile.css.map */

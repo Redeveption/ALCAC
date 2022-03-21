@@ -14,103 +14,100 @@ $other-gray: rgb(173, 164, 164);
 $carbon-transparent: rgba(54, 48, 43, 0.7);
 $red-trans: rgba(191, 48, 48, 0.5);
 
-
 @mixin gradient {
-    background: linear-gradient(#a32020, #531c1c);
+  background: linear-gradient(#a32020, #531c1c);
 }
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .hidden-mobile {
-    display: none !important;
+  display: none !important;
 }
 
-
 .hidden-tablette {
-    display: none !important;
+  display: none !important;
 }
 
 /* body pour prendre l'ensemble de la page*/
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Comfortaa", cursive;
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
 }
-
 
 /* Header */
 @mixin justifyheader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 12rem;
+  background-color: lighten($redsite, 10%);
+  padding: 0;
+  margin: 0;
+  & nav > ul {
     display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 12rem;
-    background-color: lighten($redsite,10%);
-    padding: 0;
+    position: relative;
+    flex-direction: row;
+    height: 4rem;
+    width: 100%;
+    list-style-type: none;
+    color: white;
     margin: 0;
-    &  nav > ul {
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        height: 4rem;
-        width: 100%;
-        list-style-type: none;
-        color: white;
-        margin: 0;
-        padding: 0;
-        background-color: darken($redsite,10%);
-        font-family: "Comfortaa", cursive;
-        & li {
-            display: flex;
-            width: 100%;
-            & > a {
-                @include justifyheader();
-                flex: 2 1 auto;
-                border-right:2px solid $light-gray;
-                border-left: 2px solid $light-gray;
-                & svg {
-                    width: 2em;
-                    height: 2em; 
-                    color: $gray;
-                }
-            }
+    padding: 0;
+    background-color: darken($redsite, 10%);
+    font-family: "Comfortaa", cursive;
+    & li {
+      display: flex;
+      width: 100%;
+      & > a {
+        @include justifyheader();
+        flex: 2 1 auto;
+        border-right: 2px solid $light-gray;
+        border-left: 2px solid $light-gray;
+        & svg {
+          width: 2em;
+          height: 2em;
+          color: $gray;
         }
+      }
     }
+  }
 }
 
 .spacelist {
-    @include justifyheader();
-    flex: 1 1 auto;
+  @include justifyheader();
+  flex: 1 1 auto;
+  color: $gray;
+  & a {
+    text-decoration: none;
     color: $gray;
-    & a {
-        text-decoration: none;
-        color: $gray;
-        font-size: 1.5rem;
-    }
-    & svg {
-        width: 2em;
-        height: 2em; 
-        color: $gray;
-    }
+    font-size: 1.5rem;
+  }
+  & svg {
+    width: 2em;
+    height: 2em;
+    color: $gray;
+  }
 }
 
 /* ---- Navigation bar drop-down menu --- */
 
 .nav-menu {
-    & ul {
-        display: none;
-        list-style: none;
-    }
+  & ul {
+    display: none;
+    list-style: none;
+  }
 
-    & div {
-        overflow: hidden;
-    }
+  & div {
+    overflow: hidden;
+  }
 }
 /* Appearance of the list when checked */
 
@@ -120,67 +117,69 @@ nav input[type="checkbox"]:checked + ul {
 }
 /* unchecked disappearance */
 nav input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
 /* Style menu */
 
 .drop-down {
-    display: flex;
-    flex-flow: column wrap;
-    z-index: 100;
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  z-index: 100;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 100%;
 
-    & li {
-        text-align: center;
-    }
-    & a {
-        border-bottom: none;
-        box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-        display: block;
-        text-decoration: none;
-        background-color: darken($carbon-transparent,20%);
-        padding: 9vh;
-        font-size: 1.5rem;
-    }
+  & li {
+    text-align: center;
+  }
+  & a {
+    border-bottom: none;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    display: block;
+    text-decoration: none;
+    background-color: darken($carbon-transparent, 20%);
+    padding: 9vh;
+    font-size: 1.5rem;
+  }
 }
 
-/* Header logo */ 
+/* Header logo */
 
 .inner-head {
-    display: flex;
-    align-items: flex-start;
-    overflow: hidden;
-
-    & img {
-        width: 8em;
-    }  
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  & img {
+    height: 8rem;
+  }
 }
 .head-title {
-    color: white;
-    margin-top: auto;
-    margin-bottom: auto; 
-        
-    & p { 
-        color: $gray;
-        font-weight:300;
-        font-size: 1.4rem;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
 
-        & b {
-            font-weight: 900;
-            font-style: normal;
-            color: white;
-            @media screen and (max-width:380px) {
-                font-size:1.5rem;
-            }
-            @media screen and (min-width:380px) {
-                font-size: 2rem;
-            }
-        }
+  & p {
+    color: $gray;
+    font-weight: 300;
+    font-size: 1.4rem;
+
+    & b {
+      font-weight: 900;
+      font-style: normal;
+      color: white;
+      @media screen and (max-width: 380px) {
+        font-size: 1.5rem;
+      }
+      @media screen and (min-width: 380px) {
+        font-size: 2rem;
+      }
     }
+  }
 }
 
 /*----- Main -----*/
@@ -191,7 +190,6 @@ nav input[type="checkbox"] {
 
 $slider-width: 90vw;
 $slider-height: 100%;
-
 
 #Slide {
   position: relative;
@@ -228,7 +226,6 @@ $slider-height: 100%;
   display: flex;
   align-items: center;
   font-size: small;
-
   &::after {
     position: absolute;
     display: block;
@@ -250,30 +247,29 @@ $slider-height: 100%;
     background: #fff;
     background: $red-trans;
     color: $grayperle;
-      & h3 {
+    & h3 {
       font-size: 1.5rem;
-      font-weight:bolder;
+      font-weight: bolder;
     }
-      & p {
-      @media screen and (min-width:600px)  {
-      font-size: 140%;
-      margin-top: -3vh;
-          }
-          @media screen and (min-width:500px) and (max-width:600px) {
-      font-size: 125%;
-      margin-top: -3vh;
-          }
-          @media screen and (min-width:450px) and (max-width:500px) {
-      font-size: 100%;
-      margin-top: -5vh;
-          }
-          @media screen and (min-width:0px) and (max-width:450px)  {
-      display: none;
-          }
+    & p {
+      @media screen and (min-width: 600px) {
+        font-size: 140%;
+        margin-top: -3vh;
+      }
+      @media screen and (min-width: 500px) and (max-width: 600px) {
+        font-size: 125%;
+        margin-top: -3vh;
+      }
+      @media screen and (min-width: 450px) and (max-width: 500px) {
+        font-size: 100%;
+        margin-top: -5vh;
+      }
+      @media screen and (min-width: 0px) and (max-width: 450px) {
+        display: none;
       }
     }
+  }
 }
-
 
 /* Image container and animation */
 .images-inner {
@@ -286,7 +282,6 @@ $slider-height: 100%;
   width: 20%;
   float: left;
 }
-
 
 .images-slide,
 .fake-radio,
@@ -310,9 +305,9 @@ $slider-height: 100%;
 
 /* Move slides overflowed container */
 $numberAnimation: 4;
-$animationDuration: (4100ms*$numberAnimation);
+$animationDuration: (4100ms * $numberAnimation);
 
-@for $i from 1 to ($numberAnimation + 1)  {
+@for $i from 1 to ($numberAnimation + 1) {
   #slide#{$i}:checked ~ .images-bloc .images-inner {
     margin-left: (-100% * ($i - 1));
   }
@@ -320,9 +315,9 @@ $animationDuration: (4100ms*$numberAnimation);
 
 /* Color of the ball of the pagination  */
 
-@for $i from 1 to ($numberAnimation + 1)  {
+@for $i from 1 to ($numberAnimation + 1) {
   #slide#{$i}:checked ~ .fake-radio .radio-btn:nth-child(#{$i}) {
-    background: lighten($redsite,20%);
+    background: lighten($redsite, 20%);
   }
 }
 
@@ -342,7 +337,7 @@ $animationDuration: (4100ms*$numberAnimation);
 @keyframes bullet {
   0%,
   33.32333333333334% {
-    background: lighten($redsite,20%);
+    background: lighten($redsite, 20%);
   }
   33.333333333333336%,
   100% {
@@ -350,18 +345,18 @@ $animationDuration: (4100ms*$numberAnimation);
   }
 }
 
-@for $i from 1 to ($numberAnimation + 1)  {
+@for $i from 1 to ($numberAnimation + 1) {
   #playOn:checked ~ .fake-radio .radio-btn:nth-child(#{$i}) {
     animation: bullet $animationDuration infinite (4100ms * ($i - 1) - 1000ms);
   }
 }
 /* Autoplay Slide */
 
-@keyframes slide { 
-@for $i from 1 to ($numberAnimation + 1)  {
+@keyframes slide {
+  @for $i from 1 to ($numberAnimation + 1) {
     #{($i) * 25%} {
       margin-left: -100% * ($i - 1);
-      }
+    }
   }
 }
 
@@ -390,41 +385,44 @@ $animationDuration: (4100ms*$numberAnimation);
       color: $red-trans;
       font-family: "Nanum Gothic", sans-serif;
       font-size: 2.5rem;
-    }  
+    }
   }
 }
 /* Touch slide animation */
 @keyframes anim-cmd1 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: lighten($red-trans, 10%);
     transform: translateX(-2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: lighten($red-trans, 15%);
     transform: translateX(-3vw);
   }
 }
 @keyframes anim-cmd2 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: lighten($red-trans, 10%);
     transform: translateX(2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: lighten($red-trans, 15%);
     transform: translateX(3vw);
   }
 }
 
-
 .prev {
   width: 15%;
   height: 100%;
   &:active {
-  animation: 90ms anim-cmd1;
-    }
+    animation: 90ms anim-cmd1;
+  }
   & p {
     padding-left: 1vw;
-    }
+  }
 }
 
 .next {
@@ -433,14 +431,14 @@ $animationDuration: (4100ms*$numberAnimation);
   height: 100%;
   align-content: center;
   &:active {
-  animation: 90ms anim-cmd2;
-    }
+    animation: 90ms anim-cmd2;
+  }
   & p {
     padding-left: 9vw;
   }
 }
 /* Creation of the navigation buttons display */
-@for $ni from 1 to ($numberAnimation + 1)  {
+@for $ni from 1 to ($numberAnimation + 1) {
   #slide#{$ni}:checked ~ .images-bloc > .commandes {
     display: none;
   }
@@ -601,47 +599,46 @@ $animationDuration: (4100ms*$numberAnimation);
   }
 }
 
-
 /*Aside*/
 
 aside .Selection {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    color: darken($red, 30%);
-    text-align: justify;
-    height: auto;
-    margin: 10vh 0 5vh 5vh;
-    padding-right: 5vh;
-  
-    & p b {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: darken($red, 30%);
+  text-align: justify;
+  height: auto;
+  margin: 10vh 0 5vh 5vh;
+  padding-right: 5vh;
+  & div {
+    margin-bottom: -2%;
+    & b {
       font-size: x-large;
       font-family: "Nanum Gothic", sans-serif;
     }
-  
-    & p a {
-      color: darken($red, 10%);
-      font-size: 1.5rem;
-      text-decoration:none; 
-
-    }
-  }
-  
-  .calendar {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: -5%;
-  
     & a {
-      font-size: 1.5rem;
-      margin-top: -2%;
       color: darken($red, 10%);
-      text-decoration:none;
-
+      font-size: 1.5rem;
+      text-decoration: none;
       & img {
-        margin-top: 15vh;
-        width: 100%;
+        display: none;
       }
     }
   }
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  & a {
+    font-size: 1.5rem;
+    margin-top: -15%;
+    color: darken($red, 10%);
+    text-decoration: none;
+    & img {
+      margin-top: 15vh;
+      width: 100%;
+    }
+  }
+}

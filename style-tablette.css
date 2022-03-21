@@ -175,13 +175,13 @@ nav input[type="checkbox"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
 .inner-head img {
-  width: 6em;
+  height: 6rem;
 }
 
 .head-title {
@@ -193,13 +193,14 @@ nav input[type="checkbox"] {
 .head-title h1 {
   font-weight: 500;
   font-style: normal;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: white;
   margin-left: auto;
   margin-right: auto;
 }
 
 .head-title p {
+  margin-top: -1vh;
   color: #ada4a4;
   font-weight: 300;
   font-size: 1.2rem;
@@ -243,7 +244,17 @@ nav input[type="checkbox"] {
 }
 
 /* Style of the text of the carousel*/
-#Slide figure {
+#Slide a {
+  text-decoration: none;
+  color: #6d071a;
+}
+
+#Slide a::after {
+  text-decoration: none;
+  color: #6d071a;
+}
+
+#Slide a figure {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -257,7 +268,7 @@ nav input[type="checkbox"] {
   font-size: small;
 }
 
-#Slide figure::after {
+#Slide a figure::after {
   position: absolute;
   display: block;
   content: " ";
@@ -268,13 +279,13 @@ nav input[type="checkbox"] {
   border-top: 2px solid #531c1c;
 }
 
-#Slide figure img {
+#Slide a figure img {
   border-left: 2px solid #531c1c;
   float: left;
   width: 65vw;
 }
 
-#Slide figure figcaption {
+#Slide a figure figcaption {
   position: absolute;
   right: 0;
   width: 90vw;
@@ -288,62 +299,62 @@ nav input[type="checkbox"] {
 }
 
 @media screen and (min-width: 764px) and (max-width: 900px) {
-  #Slide figure figcaption {
-    padding-top: 7vh;
+  #Slide a figure figcaption {
+    padding-top: 7%;
   }
-  #Slide figure figcaption h3 {
+  #Slide a figure figcaption h3 {
     font-size: 1.5rem;
     font-weight: bolder;
   }
-  #Slide figure figcaption p {
+  #Slide a figure figcaption p {
     font-size: 150%;
-    padding-top: 7vh;
+    padding-top: 3%;
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1100px) {
-  #Slide figure figcaption {
-    padding-top: 15vh;
+  #Slide a figure figcaption {
+    padding-top: 10%;
   }
-  #Slide figure figcaption h3 {
+  #Slide a figure figcaption h3 {
     font-size: 1.5rem;
     font-weight: bolder;
   }
-  #Slide figure figcaption p {
+  #Slide a figure figcaption p {
     font-size: 160%;
-    padding-top: 15vh;
+    padding-top: 5%;
   }
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1300px) {
-  #Slide figure figcaption {
-    padding-top: 25vh;
+  #Slide a figure figcaption {
+    padding-top: 15%;
   }
-  #Slide figure figcaption h3 {
+  #Slide a figure figcaption h3 {
     font-size: 1.5rem;
     font-weight: bolder;
   }
-  #Slide figure figcaption p {
+  #Slide a figure figcaption p {
     font-size: 170%;
-    padding-top: 20vh;
+    padding-top: 9%;
   }
 }
 
 @media screen and (min-width: 1300px) and (max-width: 1440px) {
-  #Slide figure figcaption {
-    padding-top: 25vh;
+  #Slide a figure figcaption {
+    padding-top: 20%;
   }
-  #Slide figure figcaption h3 {
+  #Slide a figure figcaption h3 {
     font-size: 1.5rem;
     font-weight: bolder;
   }
-  #Slide figure figcaption p {
+  #Slide a figure figcaption p {
     font-size: 180%;
-    padding-top: 20vh;
+    padding-top: 13%;
   }
 }
 
-#Slide figure figcaption p {
+#Slide a figure figcaption p {
   text-align: justify;
   text-align-last: center;
 }
@@ -537,24 +548,28 @@ nav input[type="checkbox"] {
 
 /* Touch slide animation */
 @-webkit-keyframes anim-cmd1 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: rgba(211, 79, 79, 0.5);
     -webkit-transform: translateX(-2vw);
             transform: translateX(-2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: rgba(216, 100, 100, 0.5);
     -webkit-transform: translateX(-3vw);
             transform: translateX(-3vw);
   }
 }
 @keyframes anim-cmd1 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: rgba(211, 79, 79, 0.5);
     -webkit-transform: translateX(-2vw);
             transform: translateX(-2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: rgba(216, 100, 100, 0.5);
     -webkit-transform: translateX(-3vw);
             transform: translateX(-3vw);
@@ -562,12 +577,14 @@ nav input[type="checkbox"] {
 }
 
 @-webkit-keyframes anim-cmd2 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: rgba(211, 79, 79, 0.5);
     -webkit-transform: translateX(2vw);
             transform: translateX(2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: rgba(216, 100, 100, 0.5);
     -webkit-transform: translateX(3vw);
             transform: translateX(3vw);
@@ -575,12 +592,14 @@ nav input[type="checkbox"] {
 }
 
 @keyframes anim-cmd2 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: rgba(211, 79, 79, 0.5);
     -webkit-transform: translateX(2vw);
             transform: translateX(2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: rgba(216, 100, 100, 0.5);
     -webkit-transform: translateX(3vw);
             transform: translateX(3vw);
@@ -1010,19 +1029,27 @@ aside .Selection {
   color: #451111;
   text-align: justify;
   height: auto;
-  margin: 10vh 0 5vh 5vh;
+  margin: 10vh 0vh 5vh 5vh;
   padding-right: 5vh;
 }
 
-aside .Selection p b {
+aside .Selection div {
+  margin-bottom: -2%;
+}
+
+aside .Selection div b {
   font-size: x-large;
   font-family: "Nanum Gothic", sans-serif;
 }
 
-aside .Selection p a {
+aside .Selection div a {
   color: #962626;
   font-size: 1.5rem;
   text-decoration: none;
+}
+
+aside .Selection div a img {
+  display: none;
 }
 
 .calendar {
@@ -1034,7 +1061,7 @@ aside .Selection p a {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-top: -5%;
+  margin-top: 5%;
 }
 
 .calendar a {

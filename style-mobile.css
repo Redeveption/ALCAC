@@ -173,10 +173,13 @@ nav input[type="checkbox"] {
       -ms-flex-align: start;
           align-items: flex-start;
   overflow: hidden;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
 .inner-head img {
-  width: 8em;
+  height: 8rem;
 }
 
 .head-title {
@@ -503,24 +506,28 @@ nav input[type="checkbox"] {
 
 /* Touch slide animation */
 @-webkit-keyframes anim-cmd1 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: rgba(211, 79, 79, 0.5);
     -webkit-transform: translateX(-2vw);
             transform: translateX(-2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: rgba(216, 100, 100, 0.5);
     -webkit-transform: translateX(-3vw);
             transform: translateX(-3vw);
   }
 }
 @keyframes anim-cmd1 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: rgba(211, 79, 79, 0.5);
     -webkit-transform: translateX(-2vw);
             transform: translateX(-2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: rgba(216, 100, 100, 0.5);
     -webkit-transform: translateX(-3vw);
             transform: translateX(-3vw);
@@ -528,12 +535,14 @@ nav input[type="checkbox"] {
 }
 
 @-webkit-keyframes anim-cmd2 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: rgba(211, 79, 79, 0.5);
     -webkit-transform: translateX(2vw);
             transform: translateX(2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: rgba(216, 100, 100, 0.5);
     -webkit-transform: translateX(3vw);
             transform: translateX(3vw);
@@ -541,12 +550,14 @@ nav input[type="checkbox"] {
 }
 
 @keyframes anim-cmd2 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: rgba(211, 79, 79, 0.5);
     -webkit-transform: translateX(2vw);
             transform: translateX(2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: rgba(216, 100, 100, 0.5);
     -webkit-transform: translateX(3vw);
             transform: translateX(3vw);
@@ -940,15 +951,23 @@ aside .Selection {
   padding-right: 5vh;
 }
 
-aside .Selection p b {
+aside .Selection div {
+  margin-bottom: -2%;
+}
+
+aside .Selection div b {
   font-size: x-large;
   font-family: "Nanum Gothic", sans-serif;
 }
 
-aside .Selection p a {
+aside .Selection div a {
   color: #962626;
   font-size: 1.5rem;
   text-decoration: none;
+}
+
+aside .Selection div a img {
+  display: none;
 }
 
 .calendar {
@@ -960,12 +979,11 @@ aside .Selection p a {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-top: -5%;
 }
 
 .calendar a {
   font-size: 1.5rem;
-  margin-top: -2%;
+  margin-top: -15%;
   color: #962626;
   text-decoration: none;
 }

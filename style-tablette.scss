@@ -15,96 +15,95 @@ $carbon-transparent: rgba(54, 48, 43, 0.7);
 $red-trans: rgba(191, 48, 48, 0.5);
 
 @mixin gradient {
-    background: linear-gradient(#a32020, #531c1c);
+  background: linear-gradient(#a32020, #531c1c);
 }
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
 
 .hidden-tablette {
-    display: none !important;
+  display: none !important;
 }
 
 /* body pour prendre l'ensemble de la page*/
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Comfortaa", cursive;
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
 }
-
 
 /* Header */
 @mixin justifyheader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 10rem;
+  background-color: lighten($redsite, 10%);
+  padding: 0;
+  margin: 0;
+  & nav > ul {
     display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 10rem;
-    background-color: lighten($redsite,10%);
-    padding: 0;
+    position: relative;
+    flex-direction: row;
+    height: 4rem;
+    width: 100%;
+    list-style-type: none;
+    color: white;
     margin: 0;
-    &  nav > ul {
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        height: 4rem;
-        width: 100%;
-        list-style-type: none;
-        color: white;
-        margin: 0;
-        padding: 0;
-        background-color: darken($redsite,10%);
-        font-family: "Comfortaa", cursive;
-        & li {
-            display: flex;
-            width: 100%;
-            & > a {
-                @include justifyheader();
-                flex: 2 1 auto;
-                border-right: 2px solid $light-gray;
-                border-left: 2px solid $light-gray;
-                & svg {
-                    width: 2em;
-                    height: 2em; 
-                    color: $gray;
-                }
-            }
+    padding: 0;
+    background-color: darken($redsite, 10%);
+    font-family: "Comfortaa", cursive;
+    & li {
+      display: flex;
+      width: 100%;
+      & > a {
+        @include justifyheader();
+        flex: 2 1 auto;
+        border-right: 2px solid $light-gray;
+        border-left: 2px solid $light-gray;
+        & svg {
+          width: 2em;
+          height: 2em;
+          color: $gray;
         }
+      }
     }
+  }
 }
 
 .spacelist {
-    @include justifyheader();
-    flex: 1 1 auto;
+  @include justifyheader();
+  flex: 1 1 auto;
+  color: $gray;
+  & a {
+    text-decoration: none;
     color: $gray;
-    & a {
-        text-decoration: none;
-        color: $gray;
-    }
-    & svg {
-        width: 2em;
-        height: 2em; 
-        color: $gray;
-    }
+  }
+  & svg {
+    width: 2em;
+    height: 2em;
+    color: $gray;
+  }
 
-    & label {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+  & label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* ---- Navigation bar drop-down menu --- */
 
 .nav-menu ul {
-    display: none;
-    list-style: none;
-  }
+  display: none;
+  list-style: none;
+}
 
 /* Appearance of the list when checked */
 
@@ -114,69 +113,68 @@ nav input[type="checkbox"]:checked + ul {
 }
 /* unchecked disappearance */
 nav input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
 /* Style menu */
 
 .drop-down {
-    display: flex;
-    flex-flow: column wrap;
-    z-index: 100;
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    width: 100%;
-
-    & li {
-        text-align: center;
-    }
-    & a {
-        border-bottom: none;
-        box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-        display: block;
-        text-decoration: none;
-        background-color: $carbon-transparent;
-        padding: 9vh;
-        font-size: 1.2rem;
-    }
+  display: flex;
+  flex-flow: column wrap;
+  z-index: 100;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 100%;
+  & li {
+    text-align: center;
+  }
+  & a {
+    border-bottom: none;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    display: block;
+    text-decoration: none;
+    background-color: $carbon-transparent;
+    padding: 9vh;
+    font-size: 1.2rem;
+  }
 }
 
-/* Header logo */ 
+/* Header logo */
 
 .inner-head {
     display: flex;
-    align-items: flex-start;
-
-    & img {
-        width: 6em;
-    }  
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  & img {
+    height: 6rem;
+  }
 }
 .head-title {
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  & h1 {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.7rem;
     color: white;
-    margin-top: auto;
-    margin-bottom: auto; 
-        
-    & h1 { 
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.4rem;
-        color: white; 
-        margin-left: auto;
-        margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  & p {
+    margin-top: -1vh;
+    color: $gray;
+    font-weight: 300;
+    font-size: 1.2rem;
+    & b {
+      font-weight: 900;
+      font-style: normal;
+      font-size: 2rem;
+      color: white;
     }
-    & p { 
-        color: $gray;
-        font-weight:300;
-        font-size: 1.2rem;
-
-        & b {
-            font-weight: 900;
-            font-style: normal;
-            font-size: 2rem;
-            color: white;
-        }
-    }
+  }
 }
 
 /*----- Main -----*/
@@ -187,7 +185,6 @@ nav input[type="checkbox"] {
 
 $slider-width: 90vw;
 $slider-height: 100%;
-
 
 #Slide {
   position: relative;
@@ -217,91 +214,98 @@ $slider-height: 100%;
   }
 }
 /* Style of the text of the carousel*/
-#Slide figure {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  font-size: small;
+#Slide a {
+  text-decoration: none;
+  color: $redsite;
   &::after {
-    position: absolute;
-    display: block;
-    content: " ";
-    top: 0;
-    left: 0;
-    width: $slider-width;
-    height: $slider-height;
-    border-top: 2px solid #531c1c;
+    text-decoration: none;
+    color: $redsite;
   }
-  & img {
-    border-left: 2px solid #531c1c;
-    float: left;
-    width: $slider-width - 25vw;
-  }
-  & figcaption {
-    position: absolute;
-    right: 0;
-    width: $slider-width;
-    background-color: lighten($gray,30%);
-    text-align: center;
-    height: 100%;
-    width:25vw;
-    padding-right: 3rem;
-    padding-left: 3rem;
-    border: 2px solid #531c1c;
-    @media screen and (min-width:764px) and (max-width:900px) {
-      padding-top: 7vh;
-      & h3 {
-        font-size: 1.5rem;
-        font-weight:bolder;
+  & figure {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    &::after {
+      position: absolute;
+      display: block;
+      content: " ";
+      top: 0;
+      left: 0;
+      width: $slider-width;
+      height: $slider-height;
+      border-top: 2px solid #531c1c;
+    }
+    & img {
+      border-left: 2px solid #531c1c;
+      float: left;
+      width: $slider-width - 25vw;
+    }
+    & figcaption {
+      position: absolute;
+      right: 0;
+      width: $slider-width;
+      background-color: lighten($gray, 30%);
+      text-align: center;
+      height: 100%;
+      width: 25vw;
+      padding-right: 3rem;
+      padding-left: 3rem;
+      border: 2px solid #531c1c;
+      @media screen and (min-width: 764px) and (max-width: 900px) {
+        padding-top: 7%;
+        & h3 {
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size: 150%;
+          padding-top: 3%;
+        }
+      }
+      @media screen and (min-width: 900px) and (max-width: 1100px) {
+        padding-top: 10%;
+        & h3 {
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size: 160%;
+          padding-top: 5%;
+        }
+      }
+      @media screen and (min-width: 1100px) and (max-width: 1300px) {
+        padding-top: 15%;
+        & h3 {
+          font-size: 1.5rem;
+          font-weight:bolder;
+        }
+        & p {
+          font-size: 170%;
+          padding-top: 9%;
+        }
+      }
+      @media screen and (min-width: 1300px) and (max-width: 1440px) {
+        padding-top: 20%;
+        & h3 {
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size: 180%;
+          padding-top: 13%;
+        }
       }
       & p {
-        font-size: 150%;
-        padding-top: 7vh;
+        text-align: justify;
+        text-align-last: center;
       }
-    }
-    @media screen and (min-width:900px) and (max-width:1100px) {
-      padding-top: 15vh;
-      & h3 {
-        font-size: 1.5rem;
-        font-weight:bolder;
-      }
-      & p {
-        font-size: 160%;
-        padding-top: 15vh;
-      }
-    }
-    @media screen and (min-width:1100px) and (max-width:1300px) {
-      padding-top: 25vh;
-      & h3 {
-        font-size: 1.5rem;
-        font-weight:bolder;
-      }
-      & p {
-        font-size: 170%;
-        padding-top: 20vh;
-      }
-    }
-    @media screen and (min-width:1300px) and (max-width:1440px)  {
-      padding-top: 25vh;
-      & h3 {
-        font-size: 1.5rem;
-        font-weight:bolder;
-      }
-      & p {
-        font-size: 180%;
-        padding-top: 20vh;
-      }
-    }
-    & p {
-      text-align: justify;
-      text-align-last: center;
     }
   }
 }
-
 
 /* Image container and animation */
 .images-inner {
@@ -314,7 +318,6 @@ $slider-height: 100%;
   width: 20%;
   float: left;
 }
-
 
 .images-slide,
 .fake-radio,
@@ -339,9 +342,9 @@ $slider-height: 100%;
 /* Move slides overflowed container */
 $numberAnimation: 4;
 $duration: 4100ms;
-$animationDuration: ($duration*$numberAnimation);
+$animationDuration: ($duration * $numberAnimation);
 
-@for $i from 1 to ($numberAnimation + 1)  {
+@for $i from 1 to ($numberAnimation + 1) {
   #slide#{$i}:checked ~ .images-bloc .images-inner {
     margin-left: (-100% * ($i - 1));
   }
@@ -349,9 +352,9 @@ $animationDuration: ($duration*$numberAnimation);
 
 /* Color of the ball of the pagination  */
 
-@for $i from 1 to ($numberAnimation + 1)  {
+@for $i from 1 to ($numberAnimation + 1) {
   #slide#{$i}:checked ~ .fake-radio .radio-btn:nth-child(#{$i}) {
-    background: lighten($redsite,20%);
+    background: lighten($redsite, 20%);
   }
 }
 
@@ -371,7 +374,7 @@ $animationDuration: ($duration*$numberAnimation);
 @keyframes bullet {
   0%,
   33.32333333333334% {
-    background: lighten($redsite,20%);
+    background: lighten($redsite, 20%);
   }
   33.333333333333336%,
   100% {
@@ -379,25 +382,24 @@ $animationDuration: ($duration*$numberAnimation);
   }
 }
 
-@for $i from 1 to ($numberAnimation + 1)  {
+@for $i from 1 to ($numberAnimation + 1) {
   #playOn:checked ~ .fake-radio .radio-btn:nth-child(#{$i}) {
     animation: bullet $animationDuration infinite (4100ms * ($i - 1) - 1000ms);
   }
 }
 /* Autoplay Slide */
 
-@keyframes slide { 
-@for $i from 1 to ($numberAnimation + 1)  {
+@keyframes slide {
+  @for $i from 1 to ($numberAnimation + 1) {
     #{($i) * 25%} {
       margin-left: -100% * ($i - 1);
-      }
+    }
   }
 }
 
 #Slide > #playOn:checked ~ .images-bloc .images-inner {
   animation: slide $animationDuration infinite;
 }
-
 
 /* Formatting navigation button */
 .commandes {
@@ -415,41 +417,44 @@ $animationDuration: ($duration*$numberAnimation);
       color: $red-trans;
       font-family: "Nanum Gothic", sans-serif;
       font-size: 2.5rem;
-    }  
+    }
   }
 }
 /* Touch slide animation */
 @keyframes anim-cmd1 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: lighten($red-trans, 10%);
     transform: translateX(-2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: lighten($red-trans, 15%);
     transform: translateX(-3vw);
   }
 }
 @keyframes anim-cmd2 {
-  0%, 50% {
+  0%,
+  50% {
     background-color: lighten($red-trans, 10%);
     transform: translateX(2vw);
   }
-  51%, 99% {
+  51%,
+  99% {
     background-color: lighten($red-trans, 15%);
     transform: translateX(3vw);
   }
 }
 
-
 .prev {
   width: 15%;
   height: 100%;
   &:active {
-  animation: 90ms anim-cmd1;
-    }
+    animation: 90ms anim-cmd1;
+  }
   & p {
     padding-left: 1vw;
-    }
+  }
 }
 
 .next {
@@ -458,15 +463,15 @@ $animationDuration: ($duration*$numberAnimation);
   height: 100%;
   align-content: center;
   &:active {
-  animation: 90ms anim-cmd2;
-    }
+    animation: 90ms anim-cmd2;
+  }
   & p {
     padding-left: 10vw;
   }
 }
 
 /* Creation of the navigation buttons display */
-@for $ni from 1 to ($numberAnimation + 1)  {
+@for $ni from 1 to ($numberAnimation + 1) {
   #slide#{$ni}:checked ~ .images-bloc > .commandes {
     display: none;
   }
@@ -488,19 +493,19 @@ $animationDuration: ($duration*$numberAnimation);
 }
 /* Opacity animation button next/previous*/
 @keyframes fadein {
-    0%, 
-    25% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.2;
-    }
-    75% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
+  0%,
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* Keyframe of Z-index to put the buttons of each slide forward*/
 @keyframes cmd1 {
@@ -643,46 +648,48 @@ $animationDuration: ($duration*$numberAnimation);
   }
 }
 
-
 /*Aside*/
 
 aside .Selection {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    color: darken($red, 30%);
-    text-align: justify;
-    height: auto;
-    margin: 10vh 0 5vh 5vh;
-    padding-right: 5vh;
-  
-    & p b {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: darken($red, 30%);
+  text-align: justify;
+  height: auto;
+  margin: 10vh 0vh 5vh 5vh;
+  padding-right: 5vh;
+  & div {
+    margin-bottom: -2%;
+    & b {
       font-size: x-large;
       font-family: "Nanum Gothic", sans-serif;
     }
-  
-    & p a {
-      color: darken($red, 10%);
-      font-size: 1.5rem;
-      text-decoration:none; 
-
-    }
-  }
-  
-  .calendar {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: -5%;
-  
     & a {
-      font-size: 1.5rem;
-      margin-top: -2%;
       color: darken($red, 10%);
-      text-decoration:none;
-
+      font-size: 1.5rem;
+      text-decoration: none;
       & img {
-        max-width: 50%;
+        display: none;
       }
     }
   }
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5%;
+
+  & a {
+    font-size: 1.5rem;
+    margin-top: -2%;
+    color: darken($red, 10%);
+    text-decoration: none;
+
+    & img {
+      max-width: 50%;
+    }
+  }
+}

@@ -272,7 +272,7 @@ nav input[type="checkbox"] {
   left: 0;
   right: 0;
   width: 90vw;
-  bottom: 0.55%;
+  bottom: 0;
   border-top: 1px solid #e1e1e1;
   text-align: center;
   background: #fff;
@@ -991,5 +991,59 @@ aside .Selection div a img {
 .calendar a img {
   margin-top: 15vh;
   width: 100%;
+}
+
+footer {
+  background-color: #6d071a;
+  height: 5rem;
+  width: 100vw;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  width: 100%;
+  color: white;
+}
+
+footer ul li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 auto;
+          flex: 2 1 auto;
+  text-decoration: none;
+  color: white;
+}
+
+footer ul li > a p {
+  text-align: center;
 }
 /*# sourceMappingURL=style-mobile.css.map */

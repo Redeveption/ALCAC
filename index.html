@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Association de Lutte Contre l'Addiction à la Confiture</title>
-    <link rel="stylesheet" href="style-mobile.css" media="screen and (min-width: 1px) and (max-width: 763px)"> <!--version mobile first-->
-    <link rel="stylesheet" href="style-tablette.css" media="screen and (min-width: 764px) and (max-width: 1439px)"> <!--version tablette-->
-    <link rel="stylesheet" href="style-desktop.css" media="screen and (min-width: 1440px)"> <!--version desktop-->
+    <link rel="stylesheet" href="style-index-mobile.css" media="screen and (min-width: 1px) and (max-width: 763px)"> <!--version mobile first-->
+    <link rel="stylesheet" href="style-index-tablette.css" media="screen and (min-width: 764px) and (max-width: 1439px)"> <!--version tablette-->
+    <link rel="stylesheet" href="style-index-desktop.css" media="screen and (min-width: 1440px)"> <!--version desktop-->
 </head>
 <body>
     <!--banner-->
@@ -51,7 +51,6 @@
                         <label for="whoRwe">
                             <p>Qui sommes-nous</p>
                             <input type="checkbox" id="whoRwe" role="button">
-                            
                             <ul>
                                 <li><a href="#">L'association</a></li>
                                 <li><a href="#">La fondation</a></li>
@@ -108,16 +107,16 @@
                             <!--drop-down menu-->
                             <ul>
                                 <li><p>Comprendre l'addiction</p></li>
-                                <li><a href="#">Qui somme nous</a></li>
-                                <li><a href="#">Évènement</a></li>
-                                <li><a href="#">Devenir Bénévole</a></li>
-                                <li><p>Comprendre l'addiction</p></li>
-                                <li><a href="#">Qui somme nous</a></li>
-                                <li><a href="#">Évènement</a></li>
-                                <li><a href="#">Devenir Bénévole</a></li>
-                                <li><p>Comprendre l'addiction</p></li></li>
-                                <li><a href="#">Qui somme nous</a></li>
-                                <li><a href="#">Évènement</a></li>
+                                <li><a href="#">Découvrer l'addition à la confiture</a></li>
+                                <li><a href="#">Testez-vous ou un proche</a></li>
+                                <li><a href="#">Que faire face à l'addiction ?</a></li>
+                                <li><p>Évènement</p></li></li>
+                                <li><a href="event.html">Date à venir</a></li>
+                                <li><a href="#">Évènements passés</a></li>
+                                <li><a href="#">Résumé de nos actions de terrain</a></li>
+                                <li><p>À propos</p></li>
+                                <li><a href="#">Qui somme-nous ?</a></li>
+                                <li><a href="#">Comment fonctionne l'association ?</a></li>
                                 <li><a href="#">Devenir Bénévole</a></li>
                             </ul>
                         </label>
@@ -125,31 +124,130 @@
                 </li>
             </ul>
         </nav>
-        <div class="inner-head">
-            <img src="Images/ALCAC-White.png" alt="">
-            <div class="head-title">
-                <div class="hidden-mobile">
-                    <h1>ALCAC</h1>
+        <div >
+            <a class="inner-head" href="">
+                <img src="Images/ALCAC-White.png" alt="">
+                <div class="head-title">
+                    <div class="hidden-mobile">
+                        <h1>ALCAC</h1>
+                    </div>
+                    <p><b>A</b>ssociation de <b>L</b>utte <b>C</b>ontre l'<b>A</b>ddiction à la <b>C</b>onfiture</p>
                 </div>
-                <p><b>A</b>ssociation de <b>L</b>utte <b>C</b>ontre l'<b>A</b>ddiction à la <b>C</b>onfiture</p>
-             </div>
+            </a>
         </div>
     </header>
     <main>
-      <article>
+        <article>
+            <div id="Slide">
+                <input type="radio" class="anchor radio" name="slider" id="slide1"/>
+                <input type="radio" class="anchor radio" name="slider" id="slide2"/>
+                <input type="radio" class="anchor radio" name="slider" id="slide3"/>
+                <input type="radio" class="anchor radio" name="slider" id="slide4"/>
+                <input type="radio" class="anchor play radio" name="slider" id="playOn" checked=""/>
+                <div class="images-bloc">
+                        <label for="slide4" class="commandes prev commandes1" title=""><div><p>&lt;</p></div></label>
+                        <label for="slide2" class="commandes next commandes1" title=""><div><p>&gt;</p></div></label>
+                        <label for="slide1" class="commandes prev commandes2" title=""><div><p>&lt;</p></div></label>
+                        <label for="slide3" class="commandes next commandes2" title=""><div><p>&gt;</p></div></label>
+                        <label for="slide2" class="commandes prev commandes3" title=""><div><p>&lt;</p></div></label>
+                        <label for="slide4" class="commandes next commandes3" title=""><div><p>&gt;</p></div></label>
+                        <label for="slide3" class="commandes prev commandes4" title=""><div><p>&lt;</p></div></label>
+                        <label for="slide1" class="commandes next commandes4" title=""><div><p>&gt;</p></div></label>
+                   <div class="images-inner">
+                        <div class="images-slide">
+                            <a href="">
+                                <figure>
+                                    <img src="Images/Confi-Diapo1.jpg" alt="">       
+                                    <figcaption><h3>Évènement passé</h3><p>Venez voir comment se sont dérouler nos derniers forum de <strong>l'ALCAC</strong></p></figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="images-slide">
+                            <a href="event.html">
+                                <figure>
+                                    <img src="Images/Confi-Diapo2.jpg" alt="">
+                                    <figcaption><h3>Évènement à venir</h3><p>Venez participer aux prochaines évènement organisé par <strong>l'ALCAC</strong></p></figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="images-slide">
+                            <a href="">
+                                <figure>
+                                    <img src="Images/Confi-Diapo3.jpg" alt="">
+                                    <figcaption><h3><strong>Nouveau fléau</strong></h3><p>La gelé de coings serait la dernière tendance des accros. Elle provoquerait selon leurs dires « Une sensation d’extase une fois rajoutée à la tartine beurrée ».</p></figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="images-slide">
+                            <a href="">
+                                <figure>
+                                    <img src="Images/Confi-Diapo4.jpg" alt="">
+                                    <figcaption><h3>Évènement à venir</h3><p>Venez participer aux prochaines évènement organisé par <strong>l'ALCAC</strong></p></figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="fake-radio">
+                      <label for="slide1" class="radio-btn"></label>
+                      <label for="slide2" class="radio-btn"></label>
+                      <label for="slide3" class="radio-btn"></label>
+                      <label for="slide4" class="radio-btn"></label>
+                    </div>
+            </div>   
       </article>
       <aside>
-        <!--<ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>-->
+        <div class="Selection">
+            <div>
+                <a href="#">
+                    <img src="/Images/Aside/IMG1.jpg" alt="">
+                    <p>
+                        <b>&gt; </b>Comprendre l'addiction à la confiture
+                    </p>
+                </a>
+                <a href="#">
+                    <img src="/Images/Aside/IMG2.jpg" alt="">
+                    <p>
+                        <b>&gt; </b>L'ALAC s'engage dans vos écoles ! Soutenez-nous
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="/Images/Aside/IMG3.jpg" alt="">
+                    <p>
+                        <b>&gt; </b>Journée portes ouvertes consacrée à la formation de nos volontaires
+                    </p>
+                </a>
+                <a href="#">
+                    <img src="/Images/Aside/IMG4.jpg" alt="">
+                    <p><b>&gt; </b>Sensibilisation aux nouvelles tendances pour une lutte efficace
+                    </p>
+                </a>
+            </div>
         </div>
-      </aside>
-    </main>
+        <div class="calendar">
+            <a href="event.html">
+                <img src="/Images/ALCAC-Calc.gif" alt="">
+                <p>Prochain Rendez-vous de l'ALCAC</p>
+            </a>
+        </div>
+    </aside>
     <footer>
+        <ul>
+            <li><a href=""><p>Annuaire</p></a></li>
+            <li><a href=""><p>Contact</p></a></li>
+            <li class="hidden-mobile"><a href=""><p>Plan du site</p></a></li>
+            <li><a href=""><p>Mentions légales</p></a></li>
+            <li><a href=""><p>CGU</p></a></li>
+            <li class="hidden-mobile"><a href="">
+                    <img src="/Images/Facebook.png" alt="">
+                </a>
+            <li class="hidden-mobile"><a href="">
+                    <img src="/Images/Twitter.png" alt="">
+            </a></li>
+        </ul>
     </footer>
+</main>
 </body>
 </html>

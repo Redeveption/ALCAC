@@ -183,6 +183,34 @@ nav input[type="checkbox"] {
   }
 }
 
+/* Section navigation and current localisation */
+
+.section-nav {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid $redsite;
+  & ol {
+    list-style-type: none;
+    padding-left: 1em;
+    & li {
+      display: inline-block;
+      color: $red-trans;
+      & a {
+        text-decoration: none;
+        color: $redsite;
+        &::after {
+          display: inline-block;
+          color: $red-trans;
+          content: ">";
+          font-size: 80%;
+          font-weight: bold;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}
+
 /*----- Main -----*/
 
 $slider-width: 90vw;
@@ -190,62 +218,63 @@ $slider-height: 100%;
 
 /* Article */
 
-article .article {
-  position: relative;
-  width: $slider-width;
-  height: $slider-height;
-  padding: 15px;
-  margin: 0 auto 2em;
-  border: 1px solid #ddd;
-  background: #fff;
-  margin-top: 2vh;
-
-  & h3 {
-    font-size: xx-large;
-    text-align: center;
-    color: $redsite;
-  }
-  & ul {
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    & li {
-      display: flex;
-      flex-direction: column;
-      & div {
-        width: 100%;
-        & img {
-          @media screen and (min-width: 0px) and (max-width: 400px) {
-            display: none;
-          }
-          @media screen and (min-width: 400px) and (max-width: 763px) {
-            width: 30%;
-            height: 30%;
-            border-radius: 25% 10% 25% 10%;
-            margin: 6% 5% 5% 0;
-            text-align: center;
-            float: left;
-          }
-        }
-        & p {
-          text-align: justify;
+section {
+  padding-top: 4em;
+  & article {
+    position: relative;
+    width: $slider-width;
+    height: $slider-height;
+    padding: 15px;
+    margin: 0 auto 2em;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-top: 2vh;
+    & h3 {
+      font-size: xx-large;
+      text-align: center;
+      color: $redsite;
+    }
+    & ul {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      & li {
+        display: flex;
+        flex-direction: column;
+        & div {
           width: 100%;
-          height: 20%;
-          font-size: x-large;
-          word-wrap: break-word;
+          & img {
+            @media screen and (min-width: 0px) and (max-width: 400px) {
+              display: none;
+            }
+            @media screen and (min-width: 400px) and (max-width: 763px) {
+              width: 30%;
+              height: 30%;
+              border-radius: 25% 10% 25% 10%;
+              margin: 6% 5% 5% 0;
+              text-align: center;
+              float: left;
+            }
+          }
+          & p {
+            text-align: justify;
+            width: 100%;
+            height: 20%;
+            font-size: x-large;
+            word-wrap: break-word;
+          }
         }
-      }
-      & h4 {
-        text-align: center;
-        text-align-last: center;
-        border-bottom: 2px solid $redsite;
-        font-size: x-large;
+        & h4 {
+          text-align: center;
+          text-align-last: center;
+          border-bottom: 2px solid $redsite;
+          font-size: x-large;
+        }
       }
     }
   }
 }
-
 /*Aside*/
 
 aside .Selection {

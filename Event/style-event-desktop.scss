@@ -217,6 +217,34 @@ header {
   }
 }
 
+/* Section navigation and current localisation */
+
+.section-nav {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid $redsite;
+  & ol {
+    list-style-type: none;
+    padding-left: 1%;
+    & li {
+      display: inline-block;
+      color: $red-trans;
+      & a {
+        text-decoration: none;
+        color: $redsite;
+        &::after {
+          display: inline-block;
+          color: $red-trans;
+          content: ">";
+          font-size: 80%;
+          font-weight: bold;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}
+
 /*----- Main -----*/
 
 $slider-width: 100%;
@@ -231,56 +259,58 @@ main {
 
 /* Article */
 
-article .article {
-  position: relative;
-  width: $slider-width - 5%;
-  height: $slider-height;
-  padding: 15px;
-  margin: 0 auto 2em;
-  border: 1px solid #ddd;
-  background: #fff;
-  margin-top: 2vh;
+Section {
+  padding-top: 5%;
+  & article {
+    position: relative;
+    width: $slider-width - 5%;
+    height: $slider-height;
+    padding: 15px;
+    margin: 0 auto 2em;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-top: 2vh;
 
-  & h3 {
-    font-size: xx-large;
-    text-align: center;
-    color: $redsite;
-  }
-  & ul {
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    & li {
-      display: flex;
-      flex-direction: column;
-      & div {
+    & h3 {
+      font-size: xx-large;
+      text-align: center;
+      color: $redsite;
+    }
+    & ul {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      & li {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        & img {
-          width: 30%;
-          border-radius: 25% 10%;
+        flex-direction: column;
+        & div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          & img {
+            width: 30%;
+            border-radius: 25% 10%;
+          }
+          & p {
+            padding-left: 5%;
+            text-align: justify;
+            text-align-last: center;
+            width: 70%;
+            font-size: x-large;
+          }
         }
-        & p {
-          padding-left: 5%;
-          text-align: justify;
+        & h4 {
+          text-align: center;
           text-align-last: center;
-          width: 70%;
+          border-bottom: 2px solid $redsite;
           font-size: x-large;
         }
-      }
-      & h4 {
-        text-align: center;
-        text-align-last: center;
-        border-bottom: 2px solid $redsite;
-        font-size: x-large;
       }
     }
   }
 }
-
 /*Aside*/
 
 aside .Selection {
@@ -353,8 +383,7 @@ aside .Selection {
   }
 }
 
-
-/* Footer */ 
+/* Footer */
 
 footer {
   background-color: $redsite;

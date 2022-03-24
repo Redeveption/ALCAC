@@ -184,6 +184,7 @@ nav input[type="checkbox"] {
 }
 
 /*----- Main -----*/
+/*----Article -----*/
 
 /*Start carousel*/
 
@@ -255,7 +256,7 @@ $slider-height: 100%;
     & p {
       @media screen and (min-width: 600px) {
         font-size: 140%;
-        margin-top: -3vh;
+        margin-top: -2.2vh;
       }
       @media screen and (min-width: 500px) and (max-width: 600px) {
         font-size: 125%;
@@ -263,7 +264,7 @@ $slider-height: 100%;
       }
       @media screen and (min-width: 450px) and (max-width: 500px) {
         font-size: 100%;
-        margin-top: -5vh;
+        margin-top: -2.5vh;
       }
       @media screen and (min-width: 0px) and (max-width: 450px) {
         display: none;

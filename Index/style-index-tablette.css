@@ -1,26 +1,14 @@
 /* Temp */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
-/* body pour prendre l'ensemble de la page*/
-.hidden-desktop {
+.hidden-tablette {
   display: none !important;
 }
 
+/* body pour prendre l'ensemble de la page*/
 body {
   margin: 0;
   padding: 0;
   font-family: "Comfortaa", cursive;
-  background-image: url(Images/Background.jpg);
-  background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 /* Header */
@@ -32,13 +20,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 1440px;
-  height: 14rem;
+  width: 100vw;
+  height: 10rem;
   background-color: #9d0a25;
   padding: 0;
   margin: 0;
-  outline: #6d071a 2px solid;
-  outline-offset: -1px;
 }
 
 header nav > ul {
@@ -107,7 +93,6 @@ header nav > ul li > a svg {
 }
 
 .spacelist a {
-  font-size: 1.3rem;
   text-decoration: none;
   color: #ada4a4;
 }
@@ -132,117 +117,57 @@ header nav > ul li > a svg {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 1.3rem;
 }
 
 /* ---- Navigation bar drop-down menu --- */
-.nav-menu label {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .nav-menu ul {
   display: none;
   list-style: none;
 }
 
-/* style all drop donw menu */
-/* --------- Hover menu ----------*/
-/* Appearance of the list when checked in hover with the mouse */
-.hover-mouse input[type="checkbox"]:hover + ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+/* Appearance of the list when checked */
+nav input[type="checkbox"]:checked + ul {
+  display: block;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  z-index: 100;
-  position: absolute;
-  top: 4rem;
-  width: 30%;
-}
-
-.hover-mouse input[type="checkbox"]:hover + ul li {
-  text-align: center;
-}
-
-.hover-mouse input[type="checkbox"]:hover + ul a {
-  border-bottom: none;
-  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-  display: block;
-  text-decoration: none;
-  background-color: white;
-  padding: 5vh;
-  font-size: 1.2rem;
-}
-
-/* unchecked disappearance for menu hover */
-.hover-mouse input[type="checkbox"] {
-  display: none;
-}
-
-/* --------- Click menu ----------*/
-/* Appearance of the list when checked with click of the mouse for menu desktop + complement style*/
-.click-drop-menu input[type="checkbox"]:checked + ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  z-index: 100;
-  position: absolute;
-  top: 4rem;
-  width: 30%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9d0a25), to(#a32020));
-  background: linear-gradient(#9d0a25, #a32020);
-  right: 0;
-  padding-right: 2vw;
-  padding-bottom: 4vh;
-}
-
-.click-drop-menu input[type="checkbox"]:checked + ul li {
-  text-align: center;
-}
-
-.click-drop-menu input[type="checkbox"]:checked + ul a {
-  border-bottom: none;
-  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-  display: block;
-  text-decoration: none;
-  background-color: white;
-  padding: 5vh;
-  font-size: 1.2rem;
-}
-
-.click-drop-menu input[type="checkbox"]:checked + ul p {
-  border-bottom: none;
-  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-  display: block;
-  text-decoration: none;
-  background-color: #6d071a;
-  width: 100%;
-  padding: 2vh;
-  font-size: 1.2rem;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 /* unchecked disappearance */
-.click-drop-menu input[type="checkbox"] {
+nav input[type="checkbox"] {
   display: none;
+}
+
+/* Style menu */
+.drop-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  z-index: 100;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 100%;
+}
+
+.drop-down li {
+  text-align: center;
+}
+
+.drop-down a {
+  border-bottom: none;
+  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+  display: block;
+  text-decoration: none;
+  background-color: rgba(54, 48, 43, 0.7);
+  padding: 9vh;
+  font-size: 1.2rem;
 }
 
 /* Header logo */
@@ -256,7 +181,7 @@ header nav > ul li > a svg {
 }
 
 .inner-head img {
-  width: 10em;
+  height: 6rem;
 }
 
 .head-title {
@@ -266,22 +191,19 @@ header nav > ul li > a svg {
 }
 
 .head-title h1 {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   font-weight: 500;
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   color: white;
   margin-left: auto;
   margin-right: auto;
 }
 
 .head-title p {
+  margin-top: -1vh;
   color: #ada4a4;
   font-weight: 300;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .head-title p b {
@@ -292,18 +214,12 @@ header nav > ul li > a svg {
 }
 
 /*----- Main -----*/
-main {
-  width: 1440px;
-  background-color: #fff;
-  outline: #6d071a 2px solid;
-  outline-offset: -1px;
-}
-
+/*----- Article -----*/
 /*Start carousel*/
 /*Principal Frame*/
 #Slide {
   position: relative;
-  width: 95%;
+  width: 90vw;
   height: 100%;
   padding: 15px;
   margin: 0 auto 2em;
@@ -323,7 +239,7 @@ main {
   bottom: 0;
   left: 0;
   content: " ";
-  width: 100%;
+  width: 90vw;
   background: #999;
   border-top: 2px solid #531c1c;
 }
@@ -359,7 +275,7 @@ main {
   content: " ";
   top: 0;
   left: 0;
-  width: 100%;
+  width: 90vw;
   height: 100%;
   border-top: 2px solid #531c1c;
 }
@@ -367,34 +283,79 @@ main {
 #Slide a figure img {
   border-left: 2px solid #531c1c;
   float: left;
-  width: 75%;
+  width: 65vw;
 }
 
 #Slide a figure figcaption {
   position: absolute;
   right: 0;
-  width: 100%;
+  width: 90vw;
   background-color: #f6f4f4;
   text-align: center;
   height: 100%;
-  width: 25%;
+  width: 25vw;
   padding-right: 3rem;
   padding-left: 3rem;
   border: 2px solid #531c1c;
-  padding-top: 25%;
 }
 
-#Slide a figure figcaption h3 {
-  font-size: 1.5rem;
-  font-weight: bolder;
+@media screen and (min-width: 764px) and (max-width: 900px) {
+  #Slide a figure figcaption {
+    padding-top: 7%;
+  }
+  #Slide a figure figcaption h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  #Slide a figure figcaption p {
+    font-size: 150%;
+    padding-top: 3%;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+  #Slide a figure figcaption {
+    padding-top: 10%;
+  }
+  #Slide a figure figcaption h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  #Slide a figure figcaption p {
+    font-size: 160%;
+    padding-top: 5%;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+  #Slide a figure figcaption {
+    padding-top: 15%;
+  }
+  #Slide a figure figcaption h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  #Slide a figure figcaption p {
+    font-size: 170%;
+    padding-top: 9%;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1440px) {
+  #Slide a figure figcaption {
+    padding-top: 20%;
+  }
+  #Slide a figure figcaption h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  #Slide a figure figcaption p {
+    font-size: 180%;
+    padding-top: 13%;
+  }
 }
 
 #Slide a figure figcaption p {
-  font-size: 180%;
-  padding-top: 15%;
-}
-
-#Slide a figure p {
   text-align: justify;
   text-align-last: center;
 }
@@ -657,7 +618,7 @@ main {
 }
 
 .prev p {
-  padding-left: 1rem;
+  padding-left: 1vw;
 }
 
 .next {
@@ -674,7 +635,7 @@ main {
 }
 
 .next p {
-  padding-left: 11rem;
+  padding-left: 10vw;
 }
 
 /* Creation of the navigation buttons display */
@@ -1058,78 +1019,37 @@ main {
 
 /*Aside*/
 aside .Selection {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   color: #451111;
-  width: 1296px;
-  margin-top: 10vh;
-  margin-bottom: 5vh;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: justify;
+  height: auto;
+  margin: 10vh 0vh 5vh 5vh;
+  padding-right: 5vh;
 }
 
 aside .Selection div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-  padding-bottom: 5vh;
-  padding-top: 5vh;
+  margin-bottom: -2%;
+}
+
+aside .Selection div b {
+  font-size: x-large;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 aside .Selection div a {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 593px;
-  height: auto;
   color: #962626;
   font-size: 1.5rem;
   text-decoration: none;
 }
 
 aside .Selection div a img {
-  width: 593px;
-  border-radius: 25% 10%;
-}
-
-aside .Selection div a p {
-  display: inline-block;
-  text-align: justify;
-  text-align-last: center;
-  position: relative;
-  height: 20%;
-  padding-right: 5%;
-  padding-left: 5%;
-}
-
-aside .Selection div a p b {
   display: none;
 }
 
@@ -1199,6 +1119,7 @@ footer ul li > a {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  text-align: center;
   color: white;
   width: 100%;
   height: 100%;
@@ -1207,4 +1128,4 @@ footer ul li > a {
 footer ul li > a img {
   height: 2em;
 }
-/*# sourceMappingURL=style-index-desktop.css.map */
+/*# sourceMappingURL=style-index-tablette.css.map */

@@ -15,25 +15,20 @@ $carbon-transparent: rgba(54, 48, 43, 0.7);
 $red-trans: rgba(191, 48, 48, 0.5);
 
 @mixin gradient {
-  background: linear-gradient(lighten(#6d071a, 10%), #a32020);
+  background: linear-gradient(#a32020, #531c1c);
 }
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
 
-/* body pour prendre l'ensemble de la page*/
-
-.hidden-desktop {
+.hidden-tablette {
   display: none !important;
 }
+
+/* body pour prendre l'ensemble de la page*/
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Comfortaa", cursive;
-  background-image: url(Images/Background.jpg);
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 /* Header */
@@ -46,13 +41,11 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  width: 1440px;
-  height: 14rem;
+  width: 100vw;
+  height: 10rem;
   background-color: lighten($redsite, 10%);
   padding: 0;
   margin: 0;
-  outline: $redsite 2px solid;
-  outline-offset: -1px;
   & nav > ul {
     display: flex;
     position: relative;
@@ -88,7 +81,6 @@ header {
   flex: 1 1 auto;
   color: $gray;
   & a {
-    font-size: 1.3rem;
     text-decoration: none;
     color: $gray;
   }
@@ -97,37 +89,43 @@ header {
     height: 2em;
     color: $gray;
   }
+
   & label {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.3rem;
   }
 }
 
 /* ---- Navigation bar drop-down menu --- */
 
-.nav-menu {
-  & label {
-    width: 100%;
-    height: 100%;
-    @include justify();
-  }
-  & ul {
-    display: none;
-    list-style: none;
-  }
+.nav-menu ul {
+  display: none;
+  list-style: none;
 }
 
-/* style all drop donw menu */
-@mixin dropdownstyle {
+/* Appearance of the list when checked */
+
+nav input[type="checkbox"]:checked + ul {
+  display: block;
+  flex-direction: row;
+}
+/* unchecked disappearance */
+nav input[type="checkbox"] {
+  display: none;
+}
+
+/* Style menu */
+
+.drop-down {
   display: flex;
   flex-flow: column wrap;
   z-index: 100;
   position: absolute;
   top: 4rem;
-  width: 30%;
+  right: 0;
+  width: 100%;
   & li {
     text-align: center;
   }
@@ -136,78 +134,40 @@ header {
     box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
     display: block;
     text-decoration: none;
-    background-color: white;
-    padding: 5vh;
+    background-color: $carbon-transparent;
+    padding: 9vh;
     font-size: 1.2rem;
   }
-}
-
-/* --------- Hover menu ----------*/
-/* Appearance of the list when checked in hover with the mouse */
-
-.hover-mouse input[type="checkbox"]:hover + ul {
-  @include dropdownstyle();
-}
-/* unchecked disappearance for menu hover */
-.hover-mouse input[type="checkbox"] {
-  display: none;
-}
-
-/* --------- Click menu ----------*/
-
-/* Appearance of the list when checked with click of the mouse for menu desktop + complement style*/
-.click-drop-menu input[type="checkbox"]:checked + ul {
-  @include dropdownstyle();
-  @include gradient();
-  right: 0;
-  padding-right: 2vw;
-  padding-bottom: 4vh;
-  & p {
-    border-bottom: none;
-    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-    display: block;
-    text-decoration: none;
-    background-color: $redsite;
-    width: 100%;
-    padding: 2vh;
-    font-size: 1.2rem;
-  }
-}
-
-/* unchecked disappearance */
-.click-drop-menu input[type="checkbox"] {
-  display: none;
 }
 
 /* Header logo */
 
 .inner-head {
-  display: flex;
-  text-decoration: none;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
   & img {
-    width: 10em;
+    height: 6rem;
   }
 }
-
 .head-title {
   color: white;
   margin-top: auto;
   margin-bottom: auto;
   & h1 {
-    flex-direction: row;
     font-weight: 500;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     color: white;
     margin-left: auto;
     margin-right: auto;
   }
   & p {
+    margin-top: -1vh;
     color: $gray;
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     & b {
       font-weight: 900;
       font-style: normal;
@@ -218,24 +178,18 @@ header {
 }
 
 /*----- Main -----*/
-
-main {
-  width: 1440px;
-  background-color: #fff;
-  outline: $redsite 2px solid;
-  outline-offset: -1px;
-}
+/*----- Article -----*/
 
 /*Start carousel*/
 
 /*Principal Frame*/
 
-$slider-width: 100%;
+$slider-width: 90vw;
 $slider-height: 100%;
 
 #Slide {
   position: relative;
-  width: $slider-width - 5%;
+  width: $slider-width;
   height: $slider-height;
   padding: 15px;
   margin: 0 auto 2em;
@@ -249,6 +203,7 @@ $slider-height: 100%;
 #Slide .images-bloc {
   position: relative;
   overflow: hidden;
+
   &::after {
     position: absolute;
     bottom: 0;
@@ -288,7 +243,7 @@ $slider-height: 100%;
     & img {
       border-left: 2px solid #531c1c;
       float: left;
-      width: $slider-width - 25%;
+      width: $slider-width - 25vw;
     }
     & figcaption {
       position: absolute;
@@ -297,23 +252,58 @@ $slider-height: 100%;
       background-color: lighten($gray, 30%);
       text-align: center;
       height: 100%;
-      width: 25%;
+      width: 25vw;
       padding-right: 3rem;
       padding-left: 3rem;
       border: 2px solid #531c1c;
-      padding-top: 25%;
-      & h3 {
-        font-size: 1.5rem;
-        font-weight: bolder;
+      @media screen and (min-width: 764px) and (max-width: 900px) {
+        padding-top: 7%;
+        & h3 {
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size: 150%;
+          padding-top: 3%;
+        }
+      }
+      @media screen and (min-width: 900px) and (max-width: 1100px) {
+        padding-top: 10%;
+        & h3 {
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size: 160%;
+          padding-top: 5%;
+        }
+      }
+      @media screen and (min-width: 1100px) and (max-width: 1300px) {
+        padding-top: 15%;
+        & h3 {
+          font-size: 1.5rem;
+          font-weight:bolder;
+        }
+        & p {
+          font-size: 170%;
+          padding-top: 9%;
+        }
+      }
+      @media screen and (min-width: 1300px) and (max-width: 1440px) {
+        padding-top: 20%;
+        & h3 {
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size: 180%;
+          padding-top: 13%;
+        }
       }
       & p {
-        font-size: 180%;
-        padding-top: 15%;
+        text-align: justify;
+        text-align-last: center;
       }
-    }
-    & p {
-      text-align: justify;
-      text-align-last: center;
     }
   }
 }
@@ -464,7 +454,7 @@ $animationDuration: ($duration * $numberAnimation);
     animation: 90ms anim-cmd1;
   }
   & p {
-    padding-left: 1rem;
+    padding-left: 1vw;
   }
 }
 
@@ -477,7 +467,7 @@ $animationDuration: ($duration * $numberAnimation);
     animation: 90ms anim-cmd2;
   }
   & p {
-    padding-left: 11rem;
+    padding-left: 10vw;
   }
 }
 
@@ -662,52 +652,31 @@ $animationDuration: ($duration * $numberAnimation);
 /*Aside*/
 
 aside .Selection {
-  display: flex;
   position: relative;
-  justify-content: space-between;
+  display: flex;
   flex-direction: column;
   color: darken($red, 30%);
-  width: (1440px * 0.9);
-  margin-top: 10vh;
-  margin-bottom: 5vh;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: justify;
+  height: auto;
+  margin: 10vh 0vh 5vh 5vh;
+  padding-right: 5vh;
   & div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    padding-bottom: 5vh;
-    padding-top: 5vh;
+    margin-bottom: -2%;
+    & b {
+      font-size: x-large;
+      font-family: "Nanum Gothic", sans-serif;
+    }
     & a {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 593px;
-      height: auto;
       color: darken($red, 10%);
       font-size: 1.5rem;
       text-decoration: none;
       & img {
-        width: 593px;
-        border-radius: 25% 10%;
-      }
-      & p {
-        display: inline-block;
-        text-align: justify;
-        text-align-last: center;
-        position: relative;
-        height: 20%;
-        padding-right: 5%;
-        padding-left: 5%;
-        & b {
-          display: none;
-        }
+        display: none;
       }
     }
   }
 }
+
 .calendar {
   display: flex;
   flex-direction: column;
@@ -746,6 +715,7 @@ footer {
       & > a {
         @include justify();
         text-decoration: none;
+        text-align: center;
         color: white;
         width: 100%;
         height: 100%;

@@ -291,6 +291,39 @@ header nav > ul li > a svg {
   color: white;
 }
 
+/* Section navigation and current localisation */
+.section-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #6d071a;
+}
+
+.section-nav ol {
+  list-style-type: none;
+  padding-left: 1%;
+}
+
+.section-nav ol li {
+  display: inline-block;
+  color: rgba(191, 48, 48, 0.5);
+}
+
+.section-nav ol li a {
+  text-decoration: none;
+  color: #6d071a;
+}
+
+.section-nav ol li a::after {
+  display: inline-block;
+  color: rgba(191, 48, 48, 0.5);
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
 /*----- Main -----*/
 main {
   width: 1440px;
@@ -300,7 +333,11 @@ main {
 }
 
 /* Article */
-article .article {
+Section {
+  padding-top: 5%;
+}
+
+Section article {
   position: relative;
   width: 95%;
   height: 100%;
@@ -311,20 +348,20 @@ article .article {
   margin-top: 2vh;
 }
 
-article .article h3 {
+Section article h3 {
   font-size: xx-large;
   text-align: center;
   color: #6d071a;
 }
 
-article .article ul {
+Section article ul {
   width: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-article .article ul li {
+Section article ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,7 +371,7 @@ article .article ul li {
           flex-direction: column;
 }
 
-article .article ul li div {
+Section article ul li div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,12 +385,12 @@ article .article ul li div {
   width: 100%;
 }
 
-article .article ul li div img {
+Section article ul li div img {
   width: 30%;
   border-radius: 25% 10%;
 }
 
-article .article ul li div p {
+Section article ul li div p {
   padding-left: 5%;
   text-align: justify;
   text-align-last: center;
@@ -361,7 +398,7 @@ article .article ul li div p {
   font-size: x-large;
 }
 
-article .article ul li h4 {
+Section article ul li h4 {
   text-align: center;
   text-align-last: center;
   border-bottom: 2px solid #6d071a;

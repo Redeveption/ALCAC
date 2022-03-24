@@ -177,6 +177,34 @@ nav input[type="checkbox"] {
   }
 }
 
+/* Section navigation and current localisation */
+
+.section-nav {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid $redsite;
+  & ol {
+    list-style-type: none;
+    padding-left: 1%;
+    & li {
+      display: inline-block;
+      color: $red-trans;
+      & a {
+        text-decoration: none;
+        color: $redsite;
+        &::after {
+          display: inline-block;
+          color: $red-trans;
+          content: ">";
+          font-size: 80%;
+          font-weight: bold;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}
+
 /*----- Main -----*/
 
 $slider-width: 90vw;
@@ -186,7 +214,9 @@ $slider-height: 100%;
 
 /* Article */
 
-article .article {
+section {
+  padding-top: 6em;
+  & article {
   position: relative;
   width: $slider-width;
   height: $slider-height;
@@ -195,7 +225,6 @@ article .article {
   border: 1px solid #ddd;
   background: #fff;
   margin-top: 2vh;
-
   & h3 {
     font-size: xx-large;
     text-align: center;
@@ -234,6 +263,7 @@ article .article {
       }
     }
   }
+}
 }
 
 /*Aside*/

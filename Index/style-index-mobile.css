@@ -1,5 +1,10 @@
 /* Temp */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.hidden-mobile {
+  display: none !important;
+}
+
 .hidden-tablette {
   display: none !important;
 }
@@ -21,7 +26,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  height: 10rem;
+  height: 12rem;
   background-color: #9d0a25;
   padding: 0;
   margin: 0;
@@ -95,6 +100,8 @@ header nav > ul li > a svg {
 .spacelist a {
   text-decoration: none;
   color: #ada4a4;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .spacelist svg {
@@ -103,26 +110,14 @@ header nav > ul li > a svg {
   color: #ada4a4;
 }
 
-.spacelist label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 /* ---- Navigation bar drop-down menu --- */
 .nav-menu ul {
   display: none;
   list-style: none;
+}
+
+.nav-menu div {
+  overflow: hidden;
 }
 
 /* Appearance of the list when checked */
@@ -165,9 +160,9 @@ nav input[type="checkbox"] {
           box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
   display: block;
   text-decoration: none;
-  background-color: rgba(54, 48, 43, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 9vh;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* Header logo */
@@ -175,13 +170,17 @@ nav input[type="checkbox"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
   text-decoration: none;
   width: 100%;
   height: 100%;
 }
 
 .inner-head img {
-  height: 6rem;
+  height: 8rem;
 }
 
 .head-title {
@@ -190,30 +189,32 @@ nav input[type="checkbox"] {
   margin-bottom: auto;
 }
 
-.head-title h1 {
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.7rem;
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .head-title p {
-  margin-top: -1vh;
   color: #ada4a4;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .head-title p b {
   font-weight: 900;
   font-style: normal;
-  font-size: 2rem;
   color: white;
 }
 
+@media screen and (max-width: 380px) {
+  .head-title p b {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .head-title p b {
+    font-size: 2rem;
+  }
+}
+
 /*----- Main -----*/
+/*----Article -----*/
 /*Start carousel*/
 /*Principal Frame*/
 #Slide {
@@ -240,21 +241,10 @@ nav input[type="checkbox"] {
   content: " ";
   width: 90vw;
   background: #999;
-  border-top: 2px solid #531c1c;
 }
 
 /* Style of the text of the carousel*/
-#Slide a {
-  text-decoration: none;
-  color: #6d071a;
-}
-
-#Slide a::after {
-  text-decoration: none;
-  color: #6d071a;
-}
-
-#Slide a figure {
+#Slide figure {
   position: relative;
   display: inline-block;
   padding: 0;
@@ -268,7 +258,7 @@ nav input[type="checkbox"] {
   font-size: small;
 }
 
-#Slide a figure::after {
+#Slide figure::after {
   position: absolute;
   display: block;
   content: " ";
@@ -276,87 +266,52 @@ nav input[type="checkbox"] {
   left: 0;
   width: 90vw;
   height: 100%;
-  border-top: 2px solid #531c1c;
 }
 
-#Slide a figure img {
-  border-left: 2px solid #531c1c;
-  float: left;
-  width: 65vw;
-}
-
-#Slide a figure figcaption {
+#Slide figure figcaption {
   position: absolute;
+  height: 35%;
+  left: 0;
   right: 0;
   width: 90vw;
-  background-color: #f6f4f4;
+  bottom: 0;
+  border-top: 1px solid #e1e1e1;
   text-align: center;
-  height: 100%;
-  width: 25vw;
-  padding-right: 3rem;
-  padding-left: 3rem;
-  border: 2px solid #531c1c;
+  background: #fff;
+  background: rgba(191, 48, 48, 0.5);
+  color: #cecece;
 }
 
-@media screen and (min-width: 764px) and (max-width: 900px) {
-  #Slide a figure figcaption {
-    padding-top: 7%;
-  }
-  #Slide a figure figcaption h3 {
-    font-size: 1.5rem;
-    font-weight: bolder;
-  }
-  #Slide a figure figcaption p {
-    font-size: 150%;
-    padding-top: 3%;
+#Slide figure figcaption h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 600px) {
+  #Slide figure figcaption p {
+    font-size: 140%;
+    margin-top: -2.2vh;
   }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1100px) {
-  #Slide a figure figcaption {
-    padding-top: 10%;
-  }
-  #Slide a figure figcaption h3 {
-    font-size: 1.5rem;
-    font-weight: bolder;
-  }
-  #Slide a figure figcaption p {
-    font-size: 160%;
-    padding-top: 5%;
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  #Slide figure figcaption p {
+    font-size: 125%;
+    margin-top: -3vh;
   }
 }
 
-@media screen and (min-width: 1100px) and (max-width: 1300px) {
-  #Slide a figure figcaption {
-    padding-top: 15%;
-  }
-  #Slide a figure figcaption h3 {
-    font-size: 1.5rem;
-    font-weight: bolder;
-  }
-  #Slide a figure figcaption p {
-    font-size: 170%;
-    padding-top: 9%;
+@media screen and (min-width: 450px) and (max-width: 500px) {
+  #Slide figure figcaption p {
+    font-size: 100%;
+    margin-top: -2.5vh;
   }
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1440px) {
-  #Slide a figure figcaption {
-    padding-top: 20%;
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  #Slide figure figcaption p {
+    display: none;
   }
-  #Slide a figure figcaption h3 {
-    font-size: 1.5rem;
-    font-weight: bolder;
-  }
-  #Slide a figure figcaption p {
-    font-size: 180%;
-    padding-top: 13%;
-  }
-}
-
-#Slide a figure figcaption p {
-  text-align: justify;
-  text-align-last: center;
 }
 
 /* Image container and animation */
@@ -519,6 +474,11 @@ nav input[type="checkbox"] {
           animation: slide 16400ms infinite;
 }
 
+.images-slide img {
+  width: 90vw;
+  height: 100%;
+}
+
 /* Formatting navigation button */
 .commandes {
   position: absolute;
@@ -634,7 +594,7 @@ nav input[type="checkbox"] {
 }
 
 .next p {
-  padding-left: 10vw;
+  padding-left: 9vw;
 }
 
 /* Creation of the navigation buttons display */
@@ -679,61 +639,21 @@ nav input[type="checkbox"] {
 #playOn:checked ~ .images-bloc > .commandes1 {
   -webkit-animation: cmd1 16400ms infinite;
           animation: cmd1 16400ms infinite;
-  -webkit-animation: fadein 4100ms infinite;
-          animation: fadein 4100ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes2 {
   -webkit-animation: cmd2 16400ms infinite;
           animation: cmd2 16400ms infinite;
-  -webkit-animation: fadein 4100ms infinite;
-          animation: fadein 4100ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes3 {
   -webkit-animation: cmd3 16400ms infinite;
           animation: cmd3 16400ms infinite;
-  -webkit-animation: fadein 4100ms infinite;
-          animation: fadein 4100ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes4 {
   -webkit-animation: cmd4 16400ms infinite;
           animation: cmd4 16400ms infinite;
-  -webkit-animation: fadein 4100ms infinite;
-          animation: fadein 4100ms infinite;
-}
-
-/* Opacity animation button next/previous*/
-@-webkit-keyframes fadein {
-  0%,
-  25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadein {
-  0%,
-  25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /* Keyframe of Z-index to put the buttons of each slide forward*/
@@ -1029,7 +949,7 @@ aside .Selection {
   color: #451111;
   text-align: justify;
   height: auto;
-  margin: 10vh 0vh 5vh 5vh;
+  margin: 10vh 0 5vh 5vh;
   padding-right: 5vh;
 }
 
@@ -1061,49 +981,51 @@ aside .Selection div a img {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-top: 5%;
 }
 
 .calendar a {
   font-size: 1.5rem;
-  margin-top: -2%;
+  margin-top: -15%;
   color: #962626;
   text-decoration: none;
 }
 
 .calendar a img {
-  max-width: 50%;
+  margin-top: 15vh;
+  width: 100%;
 }
 
 /* Footer */
 footer {
   background-color: #6d071a;
   height: 5rem;
-  width: 100%;
+  width: 100vw;
 }
 
 footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   list-style: none;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
 footer ul li {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 auto;
-          flex: 2 1 auto;
   width: 100%;
-  height: 100%;
   color: white;
 }
 
@@ -1117,14 +1039,14 @@ footer ul li > a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 auto;
+          flex: 2 1 auto;
   text-decoration: none;
-  text-align: center;
   color: white;
-  width: 100%;
-  height: 100%;
 }
 
-footer ul li > a img {
-  height: 2em;
+footer ul li > a p {
+  text-align: center;
 }
-/*# sourceMappingURL=style-index-tablette.css.map */
+/*# sourceMappingURL=style-index-mobile.css.map */

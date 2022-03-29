@@ -1,25 +1,23 @@
+/* Color variable */
+
 $redsite: #6d071a;
 $gray: rgb(173, 164, 164);
 $light-gray: rgb(133, 118, 118);
 $carbon-transparent: rgba(54, 48, 43, 0.7);
-
-/* Temp */
 $red: #bf3030;
-$grayperle: rgb(206, 206, 206);
-$white: rgb(255, 255, 255);
 $carbon: rgb(19, 14, 10);
-$light-carbon: rgb(53, 48, 43);
 $light-gray: rgb(133, 118, 118);
-$other-gray: rgb(173, 164, 164);
-$carbon-transparent: rgba(54, 48, 43, 0.7);
 $red-trans: rgba(191, 48, 48, 0.5);
 
 @mixin gradient {
   background: linear-gradient(#a32020, #531c1c);
 }
+
+/* Font import */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Hide elements that do not conform to the format */
 .hidden-mobile {
   display: none !important;
 }
@@ -28,7 +26,7 @@ $red-trans: rgba(191, 48, 48, 0.5);
   display: none !important;
 }
 
-/* body pour prendre l'ensemble de la page*/
+/* body to take the whole page*/
 
 body {
   margin: 0;
@@ -80,6 +78,8 @@ header {
     }
   }
 }
+
+/* Space and format navigation menu of header */
 
 .spacelist {
   @include justify();
@@ -306,6 +306,7 @@ aside .Selection {
   }
 }
 
+/* Calendar gif format before footer */
 .calendar {
   display: flex;
   flex-direction: column;

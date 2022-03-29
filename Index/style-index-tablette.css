@@ -1,10 +1,13 @@
-/* Temp */
+/* Color variable */
+/* Font import */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Hide elements that do not conform to the format */
 .hidden-tablette {
   display: none !important;
 }
 
-/* body pour prendre l'ensemble de la page*/
+/* body to take the whole page*/
 body {
   margin: 0;
   padding: 0;
@@ -76,6 +79,7 @@ header nav > ul li > a svg {
   color: #ada4a4;
 }
 
+/* Space and format navigation menu of header */
 .spacelist {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,6 +221,8 @@ nav input[type="checkbox"] {
 /*----- Article -----*/
 /*Start carousel*/
 /*Principal Frame*/
+/* Change for add a new slide */
+/* Change for up or down the time of animation */
 #Slide {
   position: relative;
   width: 90vw;
@@ -607,6 +613,7 @@ nav input[type="checkbox"] {
   }
 }
 
+/* Placement of the previous and next buttons */
 .prev {
   width: 15%;
   height: 100%;
@@ -738,283 +745,164 @@ nav input[type="checkbox"] {
 }
 
 /* Keyframe of Z-index to put the buttons of each slide forward*/
-@-webkit-keyframes cmd1 {
-  0%,
-  12.5% {
-    z-index: 100;
-  }
-  12.5%,
-  25% {
-    z-index: 100;
-  }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
-  50% {
-    z-index: 0;
-  }
-  50%,
-  62.5% {
-    z-index: 0;
-  }
-  62.5%,
-  75% {
-    z-index: 0;
-  }
-  75%,
-  87.5% {
-    z-index: 0;
-  }
-  87.5%,
-  99.99% {
-    z-index: 0;
-  }
+#playOn:checked ~ .images-bloc > .commandes1 {
+  -webkit-animation: cmd1 16400ms infinite;
+          animation: cmd1 16400ms infinite;
 }
-@keyframes cmd1 {
-  0%,
-  12.5% {
-    z-index: 100;
-  }
-  12.5%,
+
+@-webkit-keyframes cmd1 {
   25% {
     z-index: 100;
   }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
   50% {
     z-index: 0;
   }
-  50%,
-  62.5% {
-    z-index: 0;
-  }
-  62.5%,
   75% {
     z-index: 0;
   }
-  75%,
-  87.5% {
-    z-index: 0;
-  }
-  87.5%,
-  99.99% {
+  100% {
     z-index: 0;
   }
 }
 
-@-webkit-keyframes cmd2 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
+@keyframes cmd1 {
   25% {
-    z-index: 0;
-  }
-  25%,
-  37.5% {
     z-index: 100;
   }
-  37.5%,
   50% {
-    z-index: 100;
-  }
-  50%,
-  62.5% {
     z-index: 0;
   }
-  62.5%,
   75% {
     z-index: 0;
   }
-  75%,
-  87.5% {
+  100% {
     z-index: 0;
   }
-  87.5%,
-  99.99% {
+}
+
+#playOn:checked ~ .images-bloc > .commandes2 {
+  -webkit-animation: cmd2 16400ms infinite;
+          animation: cmd2 16400ms infinite;
+}
+
+@-webkit-keyframes cmd2 {
+  25% {
+    z-index: 0;
+  }
+  50% {
+    z-index: 100;
+  }
+  75% {
+    z-index: 0;
+  }
+  100% {
     z-index: 0;
   }
 }
 
 @keyframes cmd2 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
   25% {
     z-index: 0;
   }
-  25%,
-  37.5% {
-    z-index: 100;
-  }
-  37.5%,
   50% {
     z-index: 100;
   }
-  50%,
-  62.5% {
-    z-index: 0;
-  }
-  62.5%,
   75% {
     z-index: 0;
   }
-  75%,
-  87.5% {
-    z-index: 0;
-  }
-  87.5%,
-  99.99% {
+  100% {
     z-index: 0;
   }
 }
 
+#playOn:checked ~ .images-bloc > .commandes3 {
+  -webkit-animation: cmd3 16400ms infinite;
+          animation: cmd3 16400ms infinite;
+}
+
 @-webkit-keyframes cmd3 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
   25% {
     z-index: 0;
   }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
   50% {
     z-index: 0;
   }
-  50%,
-  62.5% {
-    z-index: 100;
-  }
-  62.5%,
   75% {
     z-index: 100;
   }
-  75%,
-  87.5% {
-    z-index: 0;
-  }
-  87.5%,
-  99.99% {
+  100% {
     z-index: 0;
   }
 }
 
 @keyframes cmd3 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
   25% {
     z-index: 0;
   }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
   50% {
     z-index: 0;
   }
-  50%,
-  62.5% {
-    z-index: 100;
-  }
-  62.5%,
   75% {
     z-index: 100;
   }
-  75%,
-  87.5% {
-    z-index: 0;
-  }
-  87.5%,
-  99.99% {
+  100% {
     z-index: 0;
   }
 }
 
+#playOn:checked ~ .images-bloc > .commandes4 {
+  -webkit-animation: cmd4 16400ms infinite;
+          animation: cmd4 16400ms infinite;
+}
+
 @-webkit-keyframes cmd4 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
   25% {
     z-index: 0;
   }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
   50% {
     z-index: 0;
   }
-  50%,
-  62.5% {
-    z-index: 0;
-  }
-  62.5%,
   75% {
     z-index: 0;
   }
-  75%,
-  87.5% {
-    z-index: 100;
-  }
-  87.5%,
-  99.99% {
+  100% {
     z-index: 100;
   }
 }
 
 @keyframes cmd4 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
   25% {
     z-index: 0;
   }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
   50% {
     z-index: 0;
   }
-  50%,
-  62.5% {
-    z-index: 0;
-  }
-  62.5%,
   75% {
     z-index: 0;
   }
-  75%,
-  87.5% {
+  100% {
     z-index: 100;
   }
-  87.5%,
-  99.99% {
-    z-index: 100;
-  }
+}
+
+#playOn:checked ~ .images-bloc > .commandes1 {
+  -webkit-animation: cmd1 16400ms infinite;
+          animation: cmd1 16400ms infinite;
+}
+
+#playOn:checked ~ .images-bloc > .commandes2 {
+  -webkit-animation: cmd2 16400ms infinite;
+          animation: cmd2 16400ms infinite;
+}
+
+#playOn:checked ~ .images-bloc > .commandes3 {
+  -webkit-animation: cmd3 16400ms infinite;
+          animation: cmd3 16400ms infinite;
+}
+
+#playOn:checked ~ .images-bloc > .commandes4 {
+  -webkit-animation: cmd4 16400ms infinite;
+          animation: cmd4 16400ms infinite;
 }
 
 /*Aside*/
@@ -1053,6 +941,7 @@ aside .Selection div a img {
   display: none;
 }
 
+/* Calendar gif format before footer */
 .calendar {
   display: -webkit-box;
   display: -ms-flexbox;

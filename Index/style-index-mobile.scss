@@ -1,25 +1,24 @@
+/* Color variable */
+
 $redsite: #6d071a;
 $gray: rgb(173, 164, 164);
-$light-gray: rgb(133, 118, 118);
-$carbon-transparent: rgba(54, 48, 43, 0.7);
-
-/* Temp */
-$red: #bf3030;
 $grayperle: rgb(206, 206, 206);
-$white: rgb(255, 255, 255);
-$carbon: rgb(19, 14, 10);
-$light-carbon: rgb(53, 48, 43);
 $light-gray: rgb(133, 118, 118);
-$other-gray: rgb(173, 164, 164);
 $carbon-transparent: rgba(54, 48, 43, 0.7);
+$red: #bf3030;
+$carbon: rgb(19, 14, 10);
+$light-gray: rgb(133, 118, 118);
 $red-trans: rgba(191, 48, 48, 0.5);
 
 @mixin gradient {
   background: linear-gradient(#a32020, #531c1c);
 }
+
+/* Font import */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Hide elements that do not conform to the format */
 .hidden-mobile {
   display: none !important;
 }
@@ -28,7 +27,7 @@ $red-trans: rgba(191, 48, 48, 0.5);
   display: none !important;
 }
 
-/* body pour prendre l'ensemble de la page*/
+/* body to take the whole page*/
 
 body {
   margin: 0;
@@ -80,6 +79,8 @@ header {
     }
   }
 }
+
+/* Space and format navigation menu of header */
 
 .spacelist {
   @include justify();
@@ -192,6 +193,9 @@ nav input[type="checkbox"] {
 
 $slider-width: 90vw;
 $slider-height: 100%;
+$numberSlide: 4; /* Change for add a new slide */
+$duration: 4100ms; /* Change for up or down the time of animation */
+$animationDuration: ($duration * $numberSlide);
 
 #Slide {
   position: relative;
@@ -252,19 +256,23 @@ $slider-height: 100%;
     & h3 {
       font-size: 1.5rem;
       font-weight: bolder;
+      @media screen and (min-width: 450px) and (max-width: 575px) {
+        font-size: 1.2rem;
+        font-weight: bolder;
+      }
     }
     & p {
       @media screen and (min-width: 600px) {
         font-size: 140%;
-        margin-top: -2.2vh;
+        margin-top: -1em;
       }
-      @media screen and (min-width: 500px) and (max-width: 600px) {
+      @media screen and (min-width: 575px) and (max-width: 600px) {
         font-size: 125%;
-        margin-top: -3vh;
+        margin-top: -1em;
       }
       @media screen and (min-width: 450px) and (max-width: 500px) {
         font-size: 100%;
-        margin-top: -2.5vh;
+        margin-top: -1em;
       }
       @media screen and (min-width: 0px) and (max-width: 450px) {
         display: none;
@@ -306,10 +314,7 @@ $slider-height: 100%;
 }
 
 /* Move slides overflowed container */
-$numberAnimation: 4;
-$animationDuration: (4100ms * $numberAnimation);
-
-@for $i from 1 to ($numberAnimation + 1) {
+@for $i from 1 to ($numberSlide + 1) {
   #slide#{$i}:checked ~ .images-bloc .images-inner {
     margin-left: (-100% * ($i - 1));
   }
@@ -317,7 +322,7 @@ $animationDuration: (4100ms * $numberAnimation);
 
 /* Color of the ball of the pagination  */
 
-@for $i from 1 to ($numberAnimation + 1) {
+@for $i from 1 to ($numberSlide + 1) {
   #slide#{$i}:checked ~ .fake-radio .radio-btn:nth-child(#{$i}) {
     background: lighten($redsite, 20%);
   }
@@ -347,7 +352,7 @@ $animationDuration: (4100ms * $numberAnimation);
   }
 }
 
-@for $i from 1 to ($numberAnimation + 1) {
+@for $i from 1 to ($numberSlide + 1) {
   #playOn:checked ~ .fake-radio .radio-btn:nth-child(#{$i}) {
     animation: bullet $animationDuration infinite (4100ms * ($i - 1) - 1000ms);
   }
@@ -355,7 +360,7 @@ $animationDuration: (4100ms * $numberAnimation);
 /* Autoplay Slide */
 
 @keyframes slide {
-  @for $i from 1 to ($numberAnimation + 1) {
+  @for $i from 1 to ($numberSlide + 1) {
     #{($i) * 25%} {
       margin-left: -100% * ($i - 1);
     }
@@ -416,6 +421,7 @@ $animationDuration: (4100ms * $numberAnimation);
   }
 }
 
+/* Placement of the previous and next buttons */
 .prev {
   width: 15%;
   height: 100%;
@@ -440,7 +446,7 @@ $animationDuration: (4100ms * $numberAnimation);
   }
 }
 /* Creation of the navigation buttons display */
-@for $ni from 1 to ($numberAnimation + 1) {
+@for $ni from 1 to ($numberSlide + 1) {
   #slide#{$ni}:checked ~ .images-bloc > .commandes {
     display: none;
   }
@@ -454,150 +460,29 @@ $animationDuration: (4100ms * $numberAnimation);
   display: block;
   z-index: 1;
 }
-@for $cmdi from 1 to 5 {
+
+/* Keyframe of Z-index to put the buttons of each slide forward*/
+$calculPercent: ((100% / $numberSlide));
+@for $cmdi from 1 to ($numberSlide + 1) {
   #playOn:checked ~ .images-bloc > .commandes#{$cmdi} {
     animation: cmd#{$cmdi} $animationDuration infinite;
   }
-}
 
-/* Keyframe of Z-index to put the buttons of each slide forward*/
-@keyframes cmd1 {
-  0%,
-  12.5% {
-    z-index: 100;
-  }
-  12.5%,
-  25% {
-    z-index: 100;
-  }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
-  50% {
-    z-index: 0;
-  }
-  50%,
-  62.5% {
-    z-index: 0;
-  }
-  62.5%,
-  75% {
-    z-index: 0;
-  }
-  75%,
-  87.5% {
-    z-index: 0;
-  }
-  87.5%,
-  99.99% {
-    z-index: 0;
+  @keyframes cmd#{$cmdi} {
+    @for $Zindexi from 1 to ($numberSlide + 1) {
+      #{$calculPercent * $Zindexi} {
+        @if $cmdi != $Zindexi {
+          z-index: 0;
+        } @else {
+          z-index: 100;
+        }
+      }
+    }
   }
 }
-
-@keyframes cmd2 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
-  25% {
-    z-index: 0;
-  }
-  25%,
-  37.5% {
-    z-index: 100;
-  }
-  37.5%,
-  50% {
-    z-index: 100;
-  }
-  50%,
-  62.5% {
-    z-index: 0;
-  }
-  62.5%,
-  75% {
-    z-index: 0;
-  }
-  75%,
-  87.5% {
-    z-index: 0;
-  }
-  87.5%,
-  99.99% {
-    z-index: 0;
-  }
-}
-
-@keyframes cmd3 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
-  25% {
-    z-index: 0;
-  }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
-  50% {
-    z-index: 0;
-  }
-  50%,
-  62.5% {
-    z-index: 100;
-  }
-  62.5%,
-  75% {
-    z-index: 100;
-  }
-  75%,
-  87.5% {
-    z-index: 0;
-  }
-  87.5%,
-  99.99% {
-    z-index: 0;
-  }
-}
-
-@keyframes cmd4 {
-  0%,
-  12.5% {
-    z-index: 0;
-  }
-  12.5%,
-  25% {
-    z-index: 0;
-  }
-  25%,
-  37.5% {
-    z-index: 0;
-  }
-  37.5%,
-  50% {
-    z-index: 0;
-  }
-  50%,
-  62.5% {
-    z-index: 0;
-  }
-  62.5%,
-  75% {
-    z-index: 0;
-  }
-  75%,
-  87.5% {
-    z-index: 100;
-  }
-  87.5%,
-  99.99% {
-    z-index: 100;
+@for $cmdi from 1 to ($numberSlide + 1) {
+  #playOn:checked ~ .images-bloc > .commandes#{$cmdi} {
+    animation: cmd#{$cmdi} $animationDuration infinite;
   }
 }
 
@@ -629,6 +514,7 @@ aside .Selection {
   }
 }
 
+/* Calendar gif format before footer */
 .calendar {
   display: flex;
   flex-direction: column;
@@ -645,7 +531,7 @@ aside .Selection {
   }
 }
 
-/* Footer */ 
+/* Footer */
 
 footer {
   background-color: $redsite;

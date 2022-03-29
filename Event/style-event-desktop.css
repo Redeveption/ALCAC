@@ -1,10 +1,13 @@
-/* Temp */
+/* Color variable */
+/* Font import */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
-/* body pour prendre l'ensemble de la page*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Hide elements that do not conform to the format */
 .hidden-desktop {
   display: none !important;
 }
 
+/* body to take the whole page*/
 body {
   margin: 0;
   padding: 0;
@@ -90,6 +93,7 @@ header nav > ul li > a svg {
   color: #ada4a4;
 }
 
+/* Space and format navigation menu of header */
 .spacelist {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,8 +210,8 @@ header nav > ul li > a svg {
   position: absolute;
   top: 4rem;
   width: 30%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9d0a25), to(#a32020));
-  background: linear-gradient(#9d0a25, #a32020);
+  background: -webkit-gradient(linear, left top, left bottom, from(#a32020), to(#531c1c));
+  background: linear-gradient(#a32020, #531c1c);
   right: 0;
   padding-right: 2vw;
   padding-bottom: 4vh;
@@ -487,6 +491,7 @@ aside .Selection div a p b {
   display: none;
 }
 
+/* Calendar gif format before footer */
 .calendar {
   display: -webkit-box;
   display: -ms-flexbox;

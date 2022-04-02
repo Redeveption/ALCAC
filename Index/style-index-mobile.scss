@@ -193,8 +193,8 @@ nav input[type="checkbox"] {
 
 $slider-width: 90vw;
 $slider-height: 100%;
-$numberSlide: 4; /* Change for add a new slide */
-$duration: 4100ms; /* Change for up or down the time of animation */
+$numberSlide: 4; /* Change for add or remove a slide in SASS code */
+$duration: 7100ms; /* Change for up or down the time of animation in SASS code*/
 $animationDuration: ($duration * $numberSlide);
 
 #Slide {
@@ -284,8 +284,6 @@ $animationDuration: ($duration * $numberSlide);
 /* Image container and animation */
 .images-inner {
   width: 500%;
-  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
-  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
 /* Align slide image*/
 .images-slide {
@@ -354,21 +352,24 @@ $animationDuration: ($duration * $numberSlide);
 
 @for $i from 1 to ($numberSlide + 1) {
   #playOn:checked ~ .fake-radio .radio-btn:nth-child(#{$i}) {
-    animation: bullet $animationDuration infinite (4100ms * ($i - 1) - 1000ms);
+    animation: bullet $animationDuration infinite ($duration * ($i) - $duration);
   }
 }
 /* Autoplay Slide */
 
 @keyframes slide {
   @for $i from 1 to ($numberSlide + 1) {
-    #{($i) * 25%} {
+    #{($i - 1) * (100% / $numberSlide)} {
       margin-left: -100% * ($i - 1);
     }
+  }
+  100% {
+    margin-left: 0%;
   }
 }
 
 #Slide > #playOn:checked ~ .images-bloc .images-inner {
-  animation: slide $animationDuration infinite;
+  animation: slide cubic-bezier(.26,1,0,1) $animationDuration infinite $duration;
 }
 
 .images-slide img {

@@ -1,0 +1,239 @@
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association de Lutte Contre l'Addiction à la Confiture</title>
+    <link rel="stylesheet" href="Event/style-event-mobile.css" media="screen and (min-width: 1px) and (max-width: 763px)"> <!--version mobile first-->
+    <link rel="stylesheet" href="Event/style-event-tablette.css" media="screen and (min-width: 764px) and (max-width: 1439px)"> <!--version tablette-->
+    <link rel="stylesheet" href="Event/style-event-desktop.css" media="screen and (min-width: 1440px)"> <!--version desktop-->
+</head>
+<body>
+    <!--banner-->
+    <header>
+        <nav> <!-- menu bar -->
+            <ul>
+                <li>
+                    <div class="spacelist"> 
+                        <a href="#">Mon compte</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" 
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 
+                        1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 
+                        6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    </a>
+                </li>
+                <!-- menu hidden for mobile and tablet-->
+                <li class="hidden-mobile hidden-tablette hover-mouse">
+                    <div class="spacelist nav-menu"> 
+                        <label for="actions">
+                            <p>Nos actions</p>
+                            <input type="checkbox" id="actions" role="button">
+                            <!--drop-down menu-->
+                            <ul>
+                                <li><a href="#">Apporter une solution</a></li>
+                                <li><a href="#">Agir contre la vulnérabilité</a></li>
+                                <li><a href="#">Témoigner-Alerter</a></li>
+                                <li><a href="#">Devenir Bénévole</a></li>
+                            </ul>
+                        </label>
+                    </div>
+                </li>
+                <!--menu hidden for mobile and tablet-->
+                <li class="hidden-mobile hidden-tablette hover-mouse"> 
+                    <div class="spacelist nav-menu"> 
+                        <label for="whoRwe">
+                            <p>Qui sommes-nous</p>
+                            <input type="checkbox" id="whoRwe" role="button">
+                            <ul>
+                                <li><a href="#">L'association</a></li>
+                                <li><a href="#">La fondation</a></li>
+                                <li><a href="#">Nos implantations</a></li>
+                                <li><a href="#">Nos chiffres</a></li>
+                            </ul>
+                        </label>
+                    </div>
+                </li>
+                <!--menu hidden for mobile and desktop-->
+                <li class="hidden-mobile hidden-desktop">
+                    <div class="spacelist nav-menu btn-header"> 
+                        <a href="#">Agir</a>
+                    </div>
+                </li>
+                <!--menu hidden for mobile-->
+                <li class="hidden-mobile">
+                    <div class="spacelist nav-menu"> 
+                        <a href="#">Faire un don</a>
+                    </div>
+                </li>
+                <!--menu hidden desktop-->
+                <li class="hidden-desktop">
+                    <div class="spacelist nav-menu">
+                        <label for="basic-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                            <div class="hidden-mobile">
+                                <p>Menu</p>
+                            </div>
+                        </label>
+                        <input type="checkbox" id="basic-menu" role="button"> 
+                        <!--drop-down menu-->
+                        <ul class="drop-down">
+                            <li><a href="#">Comprendre l'addiction</a></li>
+                            <li><a href="#">Qui somme nous</a></li>
+                            <li><a href="#">Évènement</a></li>
+                            <li><a href="#">Devenir Bénévole</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!--menu hidden for mobile and tablet-->
+                <li class="hidden-mobile hidden-tablette click-drop-menu">
+                    <div class="spacelist nav-menu">
+                        <label for="desktop-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                            <div>
+                                <p>Menu</p>
+                            </div>
+                            <input type="checkbox" id="desktop-menu" role="button"> 
+                            <!--drop-down menu-->
+                            <ul>
+                                <li><p>Comprendre l'addiction</p></li>
+                                <li><a href="#">Découvrer l'addition à la confiture</a></li>
+                                <li><a href="#">Testez-vous ou un proche</a></li>
+                                <li><a href="#">Que faire face à l'addiction ?</a></li>
+                                <li><p>À propos</p></li>
+                                <li><a href="#">Qui somme-nous ?</a></li>
+                                <li><a href="#">Comment fonctionne l'association ?</a></li>
+                                <li><a href="#">Devenir Bénévole</a></li>
+                            </ul>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div >
+            <a class="inner-head" href="index.html">
+                <img src="Images/ALCAC-White.png" alt="">
+                <div class="head-title">
+                    <div class="hidden-mobile">
+                        <h1>ALCAC</h1>
+                    </div>
+                    <p><b>A</b>ssociation de <b>L</b>utte <b>C</b>ontre l'<b>A</b>ddiction à la <b>C</b>onfiture</p>
+                </div>
+            </a>
+        </div>
+        <div class="section-nav">
+            <ol>
+                <li><a href="index.html">Accueil</a></li>
+                <li>Évènement à venir</li>
+             </ol>
+         </div>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h3>Évènement majeur à venir</h3>
+                <ul>
+                    <li>
+                        <h4><strong>28 Avril 2022- Intervention au Salon de la confiture à Paris</strong></h4>
+                        <div>
+                            <img src="/Images/Event/Salon.jpg" alt="">
+                            <p>Action de prévention pour sensibiliser les personnes aux risques
+                            lié à la consommation de confiture.
+                            </p>
+                        </div>
+                     </li>
+                     <li>
+                        <h4><strong>05 mai 2022 - Anniversaire de l'association</strong></h4>
+                        <div>
+                            <img src="/Images//Event/Anniversaire.jpg" alt="">
+                            <p>Dans l'ensemble du territoire, retrouvez-nous dans nos locaux pour participer aux différents ateliers,
+                            rencontré les bénévoles et salariés, et pleins d'autres animations.
+                            </p>
+                        </div>
+                     </li>
+                     <li>
+                        <h4><strong>10 mai 2022 - Formations de nos nouveaux bénévoles dans le centre de Lyon</strong></h4>
+                        <div>
+                            <img src="/Images//Event/Formation.jpg" alt="">
+                            <p>Première immersion de nos nouveaux bénévoles pour les accompagner et faire en sorte qu'ils acquièrent les connaissances et méthodes pour pouvoir agir aux seins de nos structures.
+                                Peut-être seriez-vous les prochains !?                                
+                            </p>
+                        </div>
+                     </li>
+                     <li>
+                        <h4><strong>25 mai 2022- Ouverture de notre nouvelle structure à Annecy</strong></h4>
+                        <div>
+                            <img src="/Images//Event/Structure.jpg" alt="">
+                            <p>Dans le cadre de nos actions, nous proposons une nouvelle structure d'accueil entièrement gratuit pour assister les personnes addictes afin d'en finir.
+                            </p>
+                        </div>
+                     </li>
+                </ul>
+            </article>
+      </section>
+      <aside>
+        <div class="Selection">
+            <h3>Regardez aussi nos autres articles ci-desous</h3>
+            <div>
+                <a href="#">
+                    <img src="/Images/Aside/IMG1.jpg" alt="">
+                    <p>
+                        <b>&gt; </b>Comprendre l'addiction à la confiture
+                    </p>
+                </a>
+                <a href="#">
+                    <img src="/Images/Aside/IMG2.jpg" alt="">
+                    <p>
+                        <b>&gt; </b>L'ALAC s'engage dans vos écoles ! Soutenez-nous
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="/Images/Aside/IMG3.jpg" alt="">
+                    <p>
+                        <b>&gt; </b>Journée portes ouvertes consacrée à la formation de nos volontaires
+                    </p>
+                </a>
+                <a href="#">
+                    <img src="/Images/Aside/IMG4.jpg" alt="">
+                    <p><b>&gt; </b>Sensibilisation aux nouvelles tendances pour une lutte efficace
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="calendar">
+            <a href="/Event/Event.html">
+                <img src="/Images/ALCAC-Calc.gif" alt="">
+                <p>Prochain Rendez-vous de l'ALCAC</p>
+            </a>
+        </div>
+    </aside>
+    <footer>
+        <ul>
+            <li><a href=""><p>Annuaire</p></a></li>
+            <li><a href=""><p>Contact</p></a></li>
+            <li class="hidden-mobile"><a href=""><p>Plan du site</p></a></li>
+            <li><a href=""><p>Mentions légales</p></a></li>
+            <li><a href=""><p>CGU</p></a></li>
+            <li class="hidden-mobile"><a href="">
+                    <img src="/Images/Facebook.png" alt="">
+                </a>
+            <li class="hidden-mobile"><a href="">
+                    <img src="/Images/Twitter.png" alt="">
+            </a></li>
+        </ul>
+    </footer>
+</main>
+</body>
+</html>

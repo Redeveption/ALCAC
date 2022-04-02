@@ -1,0 +1,418 @@
+/* Color variable */
+
+$redsite: #6d071a;
+$gray: rgb(173, 164, 164);
+$light-gray: rgb(133, 118, 118);
+$carbon-transparent: rgba(54, 48, 43, 0.7);
+$red: #bf3030;
+$carbon: rgb(19, 14, 10);
+$light-gray: rgb(133, 118, 118);
+$red-trans: rgba(191, 48, 48, 0.5);
+
+@mixin gradient {
+  background: linear-gradient(#a32020, #531c1c);
+}
+
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Hide elements that do not conform to the format */
+.hidden-desktop {
+  display: none !important;
+}
+
+/* body to take the whole page*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
+  background-image: url(../Images/Background.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Header */
+@mixin justify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  height: 14rem;
+  background-color: lighten($redsite, 10%);
+  padding: 0;
+  margin: 0;
+  outline: $redsite 2px solid;
+  outline-offset: -1px;
+  & nav > ul {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 4rem;
+    width: 100%;
+    list-style-type: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: darken($redsite, 10%);
+    font-family: "Comfortaa", cursive;
+    & li {
+      display: flex;
+      width: 100%;
+      & > a {
+        @include justify();
+        flex: 2 1 auto;
+        border-right: 2px solid $light-gray;
+        border-left: 2px solid $light-gray;
+        & svg {
+          width: 2em;
+          height: 2em;
+          color: $gray;
+        }
+      }
+    }
+  }
+}
+
+/* Space and format navigation menu of header */
+
+.spacelist {
+  @include justify();
+  flex: 1 1 auto;
+  color: $gray;
+  & a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: $gray;
+  }
+  & svg {
+    width: 2em;
+    height: 2em;
+    color: $gray;
+  }
+  & label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+  }
+}
+
+/* ---- Navigation bar drop-down menu --- */
+
+.nav-menu {
+  & label {
+    width: 100%;
+    height: 100%;
+    @include justify();
+  }
+  & ul {
+    display: none;
+    list-style: none;
+  }
+}
+
+/* style all drop donw menu */
+@mixin dropdownstyle {
+  display: flex;
+  flex-flow: column wrap;
+  z-index: 100;
+  position: absolute;
+  top: 4rem;
+  width: 30%;
+  & li {
+    text-align: center;
+  }
+  & a {
+    border-bottom: none;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    padding: 5vh;
+    font-size: 1.2rem;
+  }
+}
+
+/* --------- Hover menu ----------*/
+/* Appearance of the list when checked in hover with the mouse */
+
+.hover-mouse input[type="checkbox"]:hover + ul {
+  @include dropdownstyle();
+}
+/* unchecked disappearance for menu hover */
+.hover-mouse input[type="checkbox"] {
+  display: none;
+}
+
+/* --------- Click menu ----------*/
+
+/* Appearance of the list when checked with click of the mouse for menu desktop + complement style*/
+.click-drop-menu input[type="checkbox"]:checked + ul {
+  @include dropdownstyle();
+  @include gradient();
+  right: 0;
+  padding-right: 2vw;
+  padding-bottom: 4vh;
+  & p {
+    border-bottom: none;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    display: block;
+    text-decoration: none;
+    background-color: $redsite;
+    width: 100%;
+    padding: 2vh;
+    font-size: 1.2rem;
+  }
+}
+
+/* unchecked disappearance */
+.click-drop-menu input[type="checkbox"] {
+  display: none;
+}
+
+/* Header logo */
+
+.inner-head {
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  & img {
+    width: 10em;
+  }
+}
+
+.head-title {
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  & h1 {
+    flex-direction: row;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  & p {
+    color: $gray;
+    font-weight: 300;
+    font-size: 1.6rem;
+    & b {
+      font-weight: 900;
+      font-style: normal;
+      font-size: 2rem;
+      color: white;
+    }
+  }
+}
+
+/* Section navigation and current localisation */
+
+.section-nav {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid $redsite;
+  & ol {
+    list-style-type: none;
+    padding-left: 1%;
+    & li {
+      display: inline-block;
+      color: $red-trans;
+      & a {
+        text-decoration: none;
+        color: $redsite;
+        &::after {
+          display: inline-block;
+          color: $red-trans;
+          content: ">";
+          font-size: 80%;
+          font-weight: bold;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}
+
+/*----- Main -----*/
+
+$slider-width: 100%;
+$slider-height: 100%;
+
+main {
+  width: 1440px;
+  background-color: #fff;
+  outline: $redsite 2px solid;
+  outline-offset: -1px;
+}
+
+/* Article */
+
+Section {
+  padding-top: 5%;
+  & article {
+    position: relative;
+    width: $slider-width - 5%;
+    height: $slider-height;
+    padding: 15px;
+    margin: 0 auto 2em;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-top: 2vh;
+
+    & h3 {
+      font-size: xx-large;
+      text-align: center;
+      color: $redsite;
+    }
+    & ul {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      & li {
+        display: flex;
+        flex-direction: column;
+        & div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          & img {
+            width: 30%;
+            border-radius: 25% 10%;
+          }
+          & p {
+            padding-left: 5%;
+            text-align: justify;
+            text-align-last: center;
+            width: 70%;
+            font-size: x-large;
+          }
+        }
+        & h4 {
+          text-align: center;
+          text-align-last: center;
+          border-bottom: 2px solid $redsite;
+          font-size: x-large;
+        }
+      }
+    }
+  }
+}
+/*Aside*/
+
+aside .Selection {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: column;
+  color: darken($red, 30%);
+  width: (1440px * 0.9);
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  & h3 {
+    text-align: center;
+    font-size: x-large;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    & a {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 593px;
+      height: auto;
+      color: darken($red, 10%);
+      font-size: 1.5rem;
+      text-decoration: none;
+      & img {
+        width: 593px;
+        border-radius: 25% 10%;
+      }
+      & p {
+        display: inline-block;
+        text-align: justify;
+        text-align-last: center;
+        position: relative;
+        height: 20%;
+        padding-right: 5%;
+        padding-left: 5%;
+        & b {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* Calendar gif format before footer */
+.calendar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5%;
+
+  & a {
+    font-size: 1.5rem;
+    margin-top: -2%;
+    color: darken($red, 10%);
+    text-decoration: none;
+
+    & img {
+      max-width: 50%;
+    }
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: $redsite;
+  height: 5rem;
+  width: 100%;
+  & ul {
+    @include justify();
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    & li {
+      flex: 2 1 auto;
+      width: 100%;
+      height: 100%;
+      color: white;
+      & > a {
+        @include justify();
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        width: 100%;
+        height: 100%;
+        & img {
+          height: 2em;
+        }
+      }
+    }
+  }
+}

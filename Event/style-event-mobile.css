@@ -192,10 +192,18 @@ nav input[type="checkbox"] {
   margin-bottom: auto;
 }
 
+.head-title h1 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.7rem;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .head-title p {
   color: #ada4a4;
   font-weight: 300;
-  font-size: 1.4rem;
 }
 
 .head-title p b {
@@ -204,15 +212,44 @@ nav input[type="checkbox"] {
   color: white;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (min-width: 500px) {
+  .head-title p {
+    font-size: 1.5rem;
+    margin-top: -0.9rem;
+  }
+  .head-title p b {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 430px) and (max-width: 500px) {
+  .head-title p {
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+  }
   .head-title p b {
     font-size: 1.5rem;
   }
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 260px) and (max-width: 430px) {
+  .head-title h1 {
+    display: none;
+  }
+  .head-title p {
+    font-size: 1rem;
+  }
   .head-title p b {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 260px) {
+  .head-title h1 {
+    display: block;
+  }
+  .head-title p {
+    display: none;
   }
 }
 
@@ -293,20 +330,26 @@ section article ul li div {
   width: 100%;
 }
 
-@media screen and (min-width: 0px) and (max-width: 400px) {
+section article ul li div img {
+  border-radius: 25% 10% 25% 10%;
+  text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 650px) {
   section article ul li div img {
-    display: none;
+    float: top;
+    margin: 5% 5% 5% 5%;
+    width: 90%;
+    height: auto;
   }
 }
 
-@media screen and (min-width: 400px) and (max-width: 763px) {
+@media screen and (min-width: 650px) and (max-width: 763px) {
   section article ul li div img {
+    float: left;
+    margin: 6% 5% 5% 0;
     width: 30%;
     height: 30%;
-    border-radius: 25% 10% 25% 10%;
-    margin: 6% 5% 5% 0;
-    text-align: center;
-    float: left;
   }
 }
 

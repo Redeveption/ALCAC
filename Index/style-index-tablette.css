@@ -221,8 +221,6 @@ nav input[type="checkbox"] {
 /*----- Article -----*/
 /*Start carousel*/
 /*Principal Frame*/
-/* Change for add or remove a slide in SASS code */
-/* Change for up or down the time of animation in SASS code*/
 #Slide {
   position: relative;
   width: 90vw;
@@ -305,7 +303,35 @@ nav input[type="checkbox"] {
   border: 2px solid #531c1c;
 }
 
-@media screen and (min-width: 764px) and (max-width: 900px) {
+@media screen and (min-width: 764px) and (max-width: 820px) {
+  #Slide a figure figcaption {
+    padding-top: 5%;
+  }
+  #Slide a figure figcaption h3 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+  #Slide a figure figcaption p {
+    font-size: 1rem;
+    padding-top: 2%;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 900px) {
+  #Slide a figure figcaption {
+    padding-top: 6%;
+  }
+  #Slide a figure figcaption h3 {
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
+  #Slide a figure figcaption p {
+    font-size: 1.1rem;
+    padding-top: 2%;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1050px) {
   #Slide a figure figcaption {
     padding-top: 7%;
   }
@@ -314,26 +340,12 @@ nav input[type="checkbox"] {
     font-weight: bolder;
   }
   #Slide a figure figcaption p {
-    font-size: 150%;
-    padding-top: 3%;
-  }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1100px) {
-  #Slide a figure figcaption {
-    padding-top: 10%;
-  }
-  #Slide a figure figcaption h3 {
-    font-size: 1.5rem;
-    font-weight: bolder;
-  }
-  #Slide a figure figcaption p {
-    font-size: 160%;
+    font-size: 1.2rem;
     padding-top: 5%;
   }
 }
 
-@media screen and (min-width: 1100px) and (max-width: 1300px) {
+@media screen and (min-width: 1050px) and (max-width: 1200px) {
   #Slide a figure figcaption {
     padding-top: 15%;
   }
@@ -342,12 +354,12 @@ nav input[type="checkbox"] {
     font-weight: bolder;
   }
   #Slide a figure figcaption p {
-    font-size: 170%;
+    font-size: 1.3rem;
     padding-top: 9%;
   }
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1440px) {
+@media screen and (min-width: 1200px) and (max-width: 1340px) {
   #Slide a figure figcaption {
     padding-top: 20%;
   }
@@ -356,7 +368,21 @@ nav input[type="checkbox"] {
     font-weight: bolder;
   }
   #Slide a figure figcaption p {
-    font-size: 180%;
+    font-size: 1.4rem;
+    padding-top: 9%;
+  }
+}
+
+@media screen and (min-width: 1340px) and (max-width: 1440px) {
+  #Slide a figure figcaption {
+    padding-top: 20%;
+  }
+  #Slide a figure figcaption h3 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+  #Slide a figure figcaption p {
+    font-size: 1.4rem;
     padding-top: 13%;
   }
 }

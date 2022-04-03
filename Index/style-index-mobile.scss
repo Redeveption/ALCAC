@@ -165,21 +165,59 @@ nav input[type="checkbox"] {
   margin-top: auto;
   margin-bottom: auto;
 
+  & h1 {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.7rem;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
   & p {
     color: $gray;
     font-weight: 300;
-    font-size: 1.4rem;
 
     & b {
       font-weight: 900;
       font-style: normal;
       color: white;
-      @media screen and (max-width: 380px) {
+    }
+  }
+  @media screen and (min-width: 500px) {
+    & p {
+      font-size: 1.5rem;
+      margin-top: -0.9rem;
+      & b {
+        font-size: 1.7rem;
+      }
+    }
+  }
+  @media screen and (min-width: 430px) and (max-width:500px) {
+    & p {
+      font-size: 1.2rem;
+      margin-top: -0.5rem;
+      & b {
         font-size: 1.5rem;
       }
-      @media screen and (min-width: 380px) {
-        font-size: 2rem;
+    }
+  }
+  @media screen and (min-width: 260px) and (max-width:430px) {
+    & h1 {
+      display: none;
+    }
+    & p {
+      font-size: 1rem;
+      & b {
+        font-size: 1.5rem;
       }
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width:260px){
+    & h1 {
+      display:block
+    }
+    & p {
+      display: none;
     }
   }
 }
@@ -193,8 +231,8 @@ nav input[type="checkbox"] {
 
 $slider-width: 90vw;
 $slider-height: 100%;
-$numberSlide: 4; /* Change for add or remove a slide in SASS code */
-$duration: 7100ms; /* Change for up or down the time of animation in SASS code*/
+$numberSlide: 4; // Change for add or remove a slide
+$duration: 7100ms; // Change for up or down the time of animation
 $animationDuration: ($duration * $numberSlide);
 
 #Slide {
@@ -254,27 +292,72 @@ $animationDuration: ($duration * $numberSlide);
     background: $red-trans;
     color: $grayperle;
     & h3 {
-      font-size: 1.5rem;
       font-weight: bolder;
-      @media screen and (min-width: 450px) and (max-width: 575px) {
-        font-size: 1.2rem;
-        font-weight: bolder;
+      margin-top: 0.5rem;
+    }
+    @media screen and (min-width: 675px) and (max-width: 763px) {
+      & h3 {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+      }
+      & p {
+        font-size: 140%;
+        margin-top: 1rem;
       }
     }
-    & p {
-      @media screen and (min-width: 600px) {
-        font-size: 140%;
-        margin-top: -1em;
+    @media screen and (min-width: 600px) and (max-width: 675px) {
+      & h3 {
+        font-size: 1.4rem;
+        margin-top: 1rem;
       }
-      @media screen and (min-width: 575px) and (max-width: 600px) {
-        font-size: 125%;
-        margin-top: -1em;
+      & p {
+        font-size: 1rem;
+        margin-top: -1rem;
       }
-      @media screen and (min-width: 450px) and (max-width: 500px) {
-        font-size: 100%;
-        margin-top: -1em;
+    }
+    @media screen and (min-width: 550px) and (max-width: 600px) {
+      & h3 {
+        font-size: 1.3rem;
       }
-      @media screen and (min-width: 0px) and (max-width: 450px) {
+      & p {
+        font-size: 1rem;
+        margin-top: -1rem;
+      }
+    }
+    @media screen and (min-width: 450px) and (max-width: 550px) {
+      & h3 {
+        font-size: 1.2rem;
+        padding-bottom: 0.5rem;
+      }
+      & p {
+        font-size: 0.8rem;
+        margin-top: -1.3rem;
+      }
+    }
+    @media screen and (min-width: 350px) and (max-width: 450px) {
+      & h3 {
+        font-size: 1rem;
+        margin-top: 0.4rem;
+      }
+      & p {
+        font-size: 0.6rem;
+        font-weight: bolder;
+        margin-top: -0.5rem;
+      }
+    }
+    @media screen and (min-width: 310px) and (max-width: 350px) {
+      & h3 {
+        font-size: 1rem;
+        margin-top: 0.2rem;
+      }
+      & p {
+        font-size: 0.6rem;
+        font-weight: bolder;
+        margin-top: -0.9rem;
+      }
+    }
+    @media screen and (min-width: 0px) and (max-width: 310px) {
+      & p {
         display: none;
       }
     }
@@ -283,7 +366,7 @@ $animationDuration: ($duration * $numberSlide);
 
 /* Image container and animation */
 .images-inner {
-  width: 500%;
+  width: ($numberSlide * 100%) + 100%;
 }
 /* Align slide image*/
 .images-slide {
@@ -352,7 +435,10 @@ $animationDuration: ($duration * $numberSlide);
 
 @for $i from 1 to ($numberSlide + 1) {
   #playOn:checked ~ .fake-radio .radio-btn:nth-child(#{$i}) {
-    animation: bullet $animationDuration infinite ($duration * ($i) - $duration);
+    animation: bullet
+      $animationDuration
+      infinite
+      ($duration * ($i) - $duration);
   }
 }
 /* Autoplay Slide */
@@ -369,7 +455,8 @@ $animationDuration: ($duration * $numberSlide);
 }
 
 #Slide > #playOn:checked ~ .images-bloc .images-inner {
-  animation: slide cubic-bezier(.26,1,0,1) $animationDuration infinite $duration;
+  animation: slide cubic-bezier(0.26, 1, 0, 1) $animationDuration infinite
+    $duration;
 }
 
 .images-slide img {
@@ -443,7 +530,15 @@ $animationDuration: ($duration * $numberSlide);
     animation: 90ms anim-cmd2;
   }
   & p {
-    padding-left: 9vw;
+    @media screen and (min-width: 0px) and (max-width: 350px) {
+      padding-left: 5vw;
+    }
+    @media screen and (min-width: 350px) and (max-width: 450px) {
+      padding-left: 7vw;
+    }
+    @media screen and (min-width: 450px) and (max-width: 763px) {
+      padding-left: 9vw;
+    }
   }
 }
 /* Creation of the navigation buttons display */

@@ -232,8 +232,8 @@ main {
 
 $slider-width: 100%;
 $slider-height: 100%;
-$numberSlide: 4; /* Change for add or remove a slide in SASS code */
-$duration: 7100ms; /* Change for up or down the time of animation in SASS code*/
+$numberSlide: 4; // Change for add or remove a slide
+$duration: 7100ms; // Change for up or down the time of animation
 $animationDuration: ($duration * $numberSlide);
 
 #Slide {

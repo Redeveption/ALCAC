@@ -306,8 +306,6 @@ main {
 /*----- Article -----*/
 /*Start carousel*/
 /*Principal Frame*/
-/* Change for add or remove a slide in SASS code */
-/* Change for up or down the time of animation in SASS code*/
 #Slide {
   position: relative;
   width: 95%;

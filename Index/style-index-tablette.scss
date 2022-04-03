@@ -186,8 +186,8 @@ nav input[type="checkbox"] {
 
 $slider-width: 90vw;
 $slider-height: 100%;
-$numberSlide: 4; /* Change for add or remove a slide in SASS code */
-$duration: 7100ms; /* Change for up or down the time of animation in SASS code*/
+$numberSlide: 4; // Change for add or remove a slide
+$duration: 7100ms; // Change for up or down the time of animation
 $animationDuration: ($duration * $numberSlide);
 
 #Slide {
@@ -259,47 +259,69 @@ $animationDuration: ($duration * $numberSlide);
       padding-right: 3rem;
       padding-left: 3rem;
       border: 2px solid #531c1c;
-      @media screen and (min-width: 764px) and (max-width: 900px) {
+      @media screen and (min-width: 764px) and (max-width: 820px) {
+        padding-top: 5%;
+        & h3 {
+          font-size: 1.2rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size:1rem;
+          padding-top: 2%;
+        }
+      }
+      @media screen and (min-width: 820px) and (max-width: 900px) {
+        padding-top: 6%;
+        & h3 {
+          font-size: 1.3rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size:1.1rem;
+          padding-top: 2%;
+        }
+      }
+      @media screen and (min-width: 900px) and (max-width: 1050px) {
         padding-top: 7%;
         & h3 {
           font-size: 1.5rem;
           font-weight: bolder;
         }
         & p {
-          font-size: 150%;
-          padding-top: 3%;
-        }
-      }
-      @media screen and (min-width: 900px) and (max-width: 1100px) {
-        padding-top: 10%;
-        & h3 {
-          font-size: 1.5rem;
-          font-weight: bolder;
-        }
-        & p {
-          font-size: 160%;
+          font-size: 1.2rem;
           padding-top: 5%;
         }
       }
-      @media screen and (min-width: 1100px) and (max-width: 1300px) {
+      @media screen and (min-width: 1050px) and (max-width: 1200px) {
         padding-top: 15%;
         & h3 {
           font-size: 1.5rem;
           font-weight: bolder;
         }
         & p {
-          font-size: 170%;
+          font-size: 1.3rem;
           padding-top: 9%;
         }
       }
-      @media screen and (min-width: 1300px) and (max-width: 1440px) {
+      @media screen and (min-width: 1200px) and (max-width: 1340px) {
         padding-top: 20%;
         & h3 {
           font-size: 1.5rem;
           font-weight: bolder;
         }
         & p {
-          font-size: 180%;
+          font-size: 1.4rem;
+          padding-top: 9%;
+        }
+      }
+      @media screen and (min-width: 1340px) and (max-width: 1440px) {
+        padding-top: 20%;
+        & h3 {
+          font-size: 1.6rem;
+          font-weight: bolder;
+        }
+        & p {
+          font-size: 1.4rem;
           padding-top: 13%;
         }
       }

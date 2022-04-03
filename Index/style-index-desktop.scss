@@ -232,7 +232,7 @@ main {
 
 $slider-width: 100%;
 $slider-height: 100%;
-$numberSlide: 4; // Change for add or remove a slide
+$numberSlide: 5; // Change for add or remove a slide
 $duration: 7100ms; // Change for up or down the time of animation
 $animationDuration: ($duration * $numberSlide);
 
@@ -323,7 +323,7 @@ $animationDuration: ($duration * $numberSlide);
 
 /* Image container and animation */
 .images-inner {
-  width: ($numberSlide * 100%) + 100%;
+  width: 500%;
 }
 /* Align slide image*/
 .images-slide {

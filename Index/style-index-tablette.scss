@@ -335,7 +335,7 @@ $animationDuration: ($duration * $numberSlide);
 
 /* Image container and animation */
 .images-inner {
-  width: ($numberSlide * 100%) + 100%;
+  width: 500%;
 }
 /* Align slide image*/
 .images-slide {

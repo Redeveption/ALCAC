@@ -454,6 +454,10 @@ main {
   margin-left: -300%;
 }
 
+#slide5:checked ~ .images-bloc .images-inner {
+  margin-left: -400%;
+}
+
 /* Color of the ball of the pagination  */
 #slide1:checked ~ .fake-radio .radio-btn:nth-child(1) {
   background: #cd0d31;
@@ -468,6 +472,10 @@ main {
 }
 
 #slide4:checked ~ .fake-radio .radio-btn:nth-child(4) {
+  background: #cd0d31;
+}
+
+#slide5:checked ~ .fake-radio .radio-btn:nth-child(5) {
   background: #cd0d31;
 }
 
@@ -506,23 +514,28 @@ main {
 }
 
 #playOn:checked ~ .fake-radio .radio-btn:nth-child(1) {
-  -webkit-animation: bullet 28400ms infinite 0ms;
-          animation: bullet 28400ms infinite 0ms;
+  -webkit-animation: bullet 35500ms infinite 0ms;
+          animation: bullet 35500ms infinite 0ms;
 }
 
 #playOn:checked ~ .fake-radio .radio-btn:nth-child(2) {
-  -webkit-animation: bullet 28400ms infinite 7100ms;
-          animation: bullet 28400ms infinite 7100ms;
+  -webkit-animation: bullet 35500ms infinite 7100ms;
+          animation: bullet 35500ms infinite 7100ms;
 }
 
 #playOn:checked ~ .fake-radio .radio-btn:nth-child(3) {
-  -webkit-animation: bullet 28400ms infinite 14200ms;
-          animation: bullet 28400ms infinite 14200ms;
+  -webkit-animation: bullet 35500ms infinite 14200ms;
+          animation: bullet 35500ms infinite 14200ms;
 }
 
 #playOn:checked ~ .fake-radio .radio-btn:nth-child(4) {
-  -webkit-animation: bullet 28400ms infinite 21300ms;
-          animation: bullet 28400ms infinite 21300ms;
+  -webkit-animation: bullet 35500ms infinite 21300ms;
+          animation: bullet 35500ms infinite 21300ms;
+}
+
+#playOn:checked ~ .fake-radio .radio-btn:nth-child(5) {
+  -webkit-animation: bullet 35500ms infinite 28400ms;
+          animation: bullet 35500ms infinite 28400ms;
 }
 
 /* Autoplay Slide */
@@ -530,14 +543,17 @@ main {
   0% {
     margin-left: 0%;
   }
-  25% {
+  20% {
     margin-left: -100%;
   }
-  50% {
+  40% {
     margin-left: -200%;
   }
-  75% {
+  60% {
     margin-left: -300%;
+  }
+  80% {
+    margin-left: -400%;
   }
   100% {
     margin-left: 0%;
@@ -547,14 +563,17 @@ main {
   0% {
     margin-left: 0%;
   }
-  25% {
+  20% {
     margin-left: -100%;
   }
-  50% {
+  40% {
     margin-left: -200%;
   }
-  75% {
+  60% {
     margin-left: -300%;
+  }
+  80% {
+    margin-left: -400%;
   }
   100% {
     margin-left: 0%;
@@ -562,8 +581,8 @@ main {
 }
 
 #Slide > #playOn:checked ~ .images-bloc .images-inner {
-  -webkit-animation: slide cubic-bezier(0.26, 1, 0, 1) 28400ms infinite 7100ms;
-          animation: slide cubic-bezier(0.26, 1, 0, 1) 28400ms infinite 7100ms;
+  -webkit-animation: slide cubic-bezier(0.26, 1, 0, 1) 35500ms infinite 7100ms;
+          animation: slide cubic-bezier(0.26, 1, 0, 1) 35500ms infinite 7100ms;
 }
 
 /* Formatting navigation button */
@@ -718,6 +737,14 @@ main {
   display: block;
 }
 
+#slide5:checked ~ .images-bloc > .commandes {
+  display: none;
+}
+
+#slide5:checked ~ .images-bloc > .commandes5 {
+  display: block;
+}
+
 /*Z-index animation to match the slides*/
 #playOn:checked ~ .images-bloc > .commandes {
   display: block;
@@ -725,39 +752,42 @@ main {
 }
 
 #playOn:checked ~ .images-bloc > .commandes1 {
-  -webkit-animation: cmd1 28400ms infinite;
-          animation: cmd1 28400ms infinite;
+  -webkit-animation: cmd1 35500ms infinite;
+          animation: cmd1 35500ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes2 {
-  -webkit-animation: cmd2 28400ms infinite;
-          animation: cmd2 28400ms infinite;
+  -webkit-animation: cmd2 35500ms infinite;
+          animation: cmd2 35500ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes3 {
-  -webkit-animation: cmd3 28400ms infinite;
-          animation: cmd3 28400ms infinite;
+  -webkit-animation: cmd3 35500ms infinite;
+          animation: cmd3 35500ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes4 {
-  -webkit-animation: cmd4 28400ms infinite;
-          animation: cmd4 28400ms infinite;
+  -webkit-animation: cmd4 35500ms infinite;
+          animation: cmd4 35500ms infinite;
 }
 
 /* Keyframe of Z-index to put the buttons of each slide forward*/
 #playOn:checked ~ .images-bloc > .commandes1 {
-  -webkit-animation: cmd1 28400ms infinite;
-          animation: cmd1 28400ms infinite;
+  -webkit-animation: cmd1 35500ms infinite;
+          animation: cmd1 35500ms infinite;
 }
 
 @-webkit-keyframes cmd1 {
-  25% {
+  20% {
     z-index: 100;
   }
-  50% {
+  40% {
     z-index: 0;
   }
-  75% {
+  60% {
+    z-index: 0;
+  }
+  80% {
     z-index: 0;
   }
   100% {
@@ -766,13 +796,16 @@ main {
 }
 
 @keyframes cmd1 {
-  25% {
+  20% {
     z-index: 100;
   }
-  50% {
+  40% {
     z-index: 0;
   }
-  75% {
+  60% {
+    z-index: 0;
+  }
+  80% {
     z-index: 0;
   }
   100% {
@@ -781,18 +814,21 @@ main {
 }
 
 #playOn:checked ~ .images-bloc > .commandes2 {
-  -webkit-animation: cmd2 28400ms infinite;
-          animation: cmd2 28400ms infinite;
+  -webkit-animation: cmd2 35500ms infinite;
+          animation: cmd2 35500ms infinite;
 }
 
 @-webkit-keyframes cmd2 {
-  25% {
+  20% {
     z-index: 0;
   }
-  50% {
+  40% {
     z-index: 100;
   }
-  75% {
+  60% {
+    z-index: 0;
+  }
+  80% {
     z-index: 0;
   }
   100% {
@@ -801,13 +837,16 @@ main {
 }
 
 @keyframes cmd2 {
-  25% {
+  20% {
     z-index: 0;
   }
-  50% {
+  40% {
     z-index: 100;
   }
-  75% {
+  60% {
+    z-index: 0;
+  }
+  80% {
     z-index: 0;
   }
   100% {
@@ -816,19 +855,22 @@ main {
 }
 
 #playOn:checked ~ .images-bloc > .commandes3 {
-  -webkit-animation: cmd3 28400ms infinite;
-          animation: cmd3 28400ms infinite;
+  -webkit-animation: cmd3 35500ms infinite;
+          animation: cmd3 35500ms infinite;
 }
 
 @-webkit-keyframes cmd3 {
-  25% {
+  20% {
     z-index: 0;
   }
-  50% {
+  40% {
     z-index: 0;
   }
-  75% {
+  60% {
     z-index: 100;
+  }
+  80% {
+    z-index: 0;
   }
   100% {
     z-index: 0;
@@ -836,14 +878,17 @@ main {
 }
 
 @keyframes cmd3 {
-  25% {
+  20% {
     z-index: 0;
   }
-  50% {
+  40% {
     z-index: 0;
   }
-  75% {
+  60% {
     z-index: 100;
+  }
+  80% {
+    z-index: 0;
   }
   100% {
     z-index: 0;
@@ -851,18 +896,62 @@ main {
 }
 
 #playOn:checked ~ .images-bloc > .commandes4 {
-  -webkit-animation: cmd4 28400ms infinite;
-          animation: cmd4 28400ms infinite;
+  -webkit-animation: cmd4 35500ms infinite;
+          animation: cmd4 35500ms infinite;
 }
 
 @-webkit-keyframes cmd4 {
-  25% {
+  20% {
     z-index: 0;
   }
-  50% {
+  40% {
     z-index: 0;
   }
-  75% {
+  60% {
+    z-index: 0;
+  }
+  80% {
+    z-index: 100;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+@keyframes cmd4 {
+  20% {
+    z-index: 0;
+  }
+  40% {
+    z-index: 0;
+  }
+  60% {
+    z-index: 0;
+  }
+  80% {
+    z-index: 100;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+#playOn:checked ~ .images-bloc > .commandes5 {
+  -webkit-animation: cmd5 35500ms infinite;
+          animation: cmd5 35500ms infinite;
+}
+
+@-webkit-keyframes cmd5 {
+  20% {
+    z-index: 0;
+  }
+  40% {
+    z-index: 0;
+  }
+  60% {
+    z-index: 0;
+  }
+  80% {
     z-index: 0;
   }
   100% {
@@ -870,14 +959,17 @@ main {
   }
 }
 
-@keyframes cmd4 {
-  25% {
+@keyframes cmd5 {
+  20% {
     z-index: 0;
   }
-  50% {
+  40% {
     z-index: 0;
   }
-  75% {
+  60% {
+    z-index: 0;
+  }
+  80% {
     z-index: 0;
   }
   100% {
@@ -886,23 +978,28 @@ main {
 }
 
 #playOn:checked ~ .images-bloc > .commandes1 {
-  -webkit-animation: cmd1 28400ms infinite;
-          animation: cmd1 28400ms infinite;
+  -webkit-animation: cmd1 35500ms infinite;
+          animation: cmd1 35500ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes2 {
-  -webkit-animation: cmd2 28400ms infinite;
-          animation: cmd2 28400ms infinite;
+  -webkit-animation: cmd2 35500ms infinite;
+          animation: cmd2 35500ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes3 {
-  -webkit-animation: cmd3 28400ms infinite;
-          animation: cmd3 28400ms infinite;
+  -webkit-animation: cmd3 35500ms infinite;
+          animation: cmd3 35500ms infinite;
 }
 
 #playOn:checked ~ .images-bloc > .commandes4 {
-  -webkit-animation: cmd4 28400ms infinite;
-          animation: cmd4 28400ms infinite;
+  -webkit-animation: cmd4 35500ms infinite;
+          animation: cmd4 35500ms infinite;
+}
+
+#playOn:checked ~ .images-bloc > .commandes5 {
+  -webkit-animation: cmd5 35500ms infinite;
+          animation: cmd5 35500ms infinite;
 }
 
 /*Aside*/
